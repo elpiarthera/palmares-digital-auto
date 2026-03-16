@@ -1,0 +1,257 @@
+{
+  "meta": {
+    "siteName": "Palmar\u00e8s Digital Auto France 2026",
+    "siteDescription": "Le classement de la maturit\u00e9 digitale des groupes de distribution automobile en France. 16 groupes audit\u00e9s, 87 crit\u00e8res, 4 dimensions."
+  },
+  "nav": {
+    "home": "Accueil",
+    "ranking": "Classement",
+    "methodology": "M\u00e9thodologie",
+    "insights": "Insights",
+    "about": "\u00c0 propos",
+    "getScore": "Obtenir votre score",
+    "language": "EN"
+  },
+  "home": {
+    "hero": {
+      "title": "Palmar\u00e8s Digital Auto France 2026",
+      "subtitle": "Le classement de la maturit\u00e9 digitale des groupes de distribution automobile",
+      "description": "16 groupes audit\u00e9s. 87 crit\u00e8res. 4 dimensions. Une transparence totale.",
+      "ctaRanking": "Voir le classement complet",
+      "ctaScore": "Obtenir votre score"
+    },
+    "stats": {
+      "title": "\u00c9tat des lieux de l\u2019industrie",
+      "averageScore": "Score moyen",
+      "outOf": "sur 400",
+      "groupsAudited": "Groupes audit\u00e9s",
+      "groups": "groupes",
+      "checksPerformed": "Contr\u00f4les r\u00e9alis\u00e9s",
+      "checks": "crit\u00e8res",
+      "blindSpot": "Angle mort",
+      "blindSpotLabel": "Citation IA",
+      "blindSpotScore": "28/100 en moyenne"
+    },
+    "topFive": {
+      "title": "Top 5 du classement",
+      "seeAll": "Voir les 16 groupes"
+    }
+  },
+  "ranking": {
+    "title": "Classement complet",
+    "description": "Les 16 groupes de distribution automobile fran\u00e7ais, class\u00e9s par maturit\u00e9 digitale.",
+    "filterByTier": "Filtrer par tier",
+    "allTiers": "Tous les tiers",
+    "sortBy": "Trier par",
+    "columns": {
+      "rank": "#",
+      "group": "Groupe",
+      "seoTech": "SEO Tech",
+      "seoContent": "SEO Contenu",
+      "email": "Email",
+      "aiCitation": "Citation IA",
+      "total": "Total",
+      "tier": "Tier"
+    }
+  },
+  "group": {
+    "rank": "Rang",
+    "of": "sur 16",
+    "total": "Score total",
+    "outOf400": "sur 400",
+    "tier": "Tier",
+    "dimensions": "Scores par dimension",
+    "seoTechnical": "SEO Technique",
+    "seoContent": "SEO Contenu",
+    "email": "Email & D\u00e9livrabilit\u00e9",
+    "aiCitation": "Citation IA",
+    "quickWins": "Top 3 des corrections prioritaires",
+    "keyFindings": "Constats cl\u00e9s par dimension",
+    "downloadAudit": "T\u00e9l\u00e9charger l\u2019audit complet",
+    "downloadDescription": "Recevez les 16 livrables d\u2019audit de ce groupe par email.",
+    "backToRanking": "Retour au classement",
+    "website": "Site web",
+    "revenue": "CA",
+    "dealerships": "Concessions",
+    "hq": "Si\u00e8ge",
+    "region": "R\u00e9gion",
+    "vsAverage": "vs. moyenne secteur",
+    "impact": {
+      "high": "Impact fort",
+      "medium": "Impact moyen",
+      "low": "Impact faible"
+    }
+  },
+  "methodology": {
+    "title": "M\u00e9thodologie",
+    "description": "Comment nous mesurons la maturit\u00e9 digitale. 87 crit\u00e8res, 4 dimensions, transparence totale.",
+    "overview": {
+      "title": "Vue d\u2019ensemble",
+      "description": "Chaque groupe est \u00e9valu\u00e9 sur 4 dimensions, chacune not\u00e9e sur 100 points, pour un total maximum de 400 points."
+    },
+    "dimensions": {
+      "title": "Les 4 dimensions",
+      "seoTechnical": {
+        "title": "D1 \u2014 SEO Technique",
+        "checks": "27 contr\u00f4les",
+        "description": "Google peut-il explorer et indexer correctement le site ? Crawlabilit\u00e9, indexabilit\u00e9, s\u00e9curit\u00e9, structure d\u2019URLs, mobile, Core Web Vitals."
+      },
+      "seoContent": {
+        "title": "D2 \u2014 SEO Contenu",
+        "checks": "23 contr\u00f4les",
+        "description": "Le contenu est-il profond, autoritaire et bien structur\u00e9 ? Signaux E-E-A-T, profondeur, lisibilit\u00e9, blog, maillage interne."
+      },
+      "email": {
+        "title": "D3 \u2014 Email & D\u00e9livrabilit\u00e9",
+        "checks": "20 contr\u00f4les",
+        "description": "Le domaine peut-il envoyer des emails qui arrivent en bo\u00eete de r\u00e9ception ? SPF, DKIM, DMARC, blacklists, TLS."
+      },
+      "aiCitation": {
+        "title": "D4 \u2014 Citation IA",
+        "checks": "17 contr\u00f4les",
+        "description": "ChatGPT, Perplexity, Google AI peuvent-ils citer ce site ? Schema.org, FAQ, clart\u00e9 des entit\u00e9s, accessibilit\u00e9 aux bots IA."
+      }
+    },
+    "tiers": {
+      "title": "Niveaux de classement",
+      "A": { "label": "Tier A", "range": "260\u2013400 points", "description": "Leaders digitaux. Fondations solides, pr\u00e9sence IA proactive." },
+      "B": { "label": "Tier B", "range": "210\u2013259 points", "description": "En progression. Bases couvertes mais lacunes significatives." },
+      "C": { "label": "Tier C", "range": "160\u2013209 points", "description": "En retard. Probl\u00e8mes multiples. La pr\u00e9sence digitale est un passif." },
+      "D": { "label": "Tier D", "range": "0\u2013159 points", "description": "Critique. D\u00e9faillances fondamentales. Rem\u00e9diation imm\u00e9diate n\u00e9cessaire." }
+    },
+    "tools": {
+      "title": "Outils et m\u00e9thodes",
+      "description": "Tous les scores sont d\u00e9riv\u00e9s d\u2019agents automatis\u00e9s sp\u00e9cialis\u00e9s. Pipeline : scraping Firecrawl, analyse DNS, agents SEO, agents email, agents IA."
+    },
+    "transparency": {
+      "title": "Transparence",
+      "items": [
+        "Scores bas\u00e9s uniquement sur des donn\u00e9es publiquement accessibles",
+        "Audit email bas\u00e9 sur l\u2019infrastructure DNS, pas les m\u00e9triques de d\u00e9livrabilit\u00e9",
+        "Scores de performance depuis un seul emplacement g\u00e9ographique (Paris)",
+        "\u00c9valuation du contenu \u00e0 date fixe (date d\u2019audit indiqu\u00e9e)",
+        "La citation IA est un domaine \u00e9mergent \u2014 les crit\u00e8res \u00e9volueront"
+      ]
+    },
+    "faq": {
+      "title": "Questions fr\u00e9quentes",
+      "items": [
+        {
+          "question": "Comment les scores sont-ils calcul\u00e9s ?",
+          "answer": "Chaque dimension est not\u00e9e sur 100 points \u00e0 partir de contr\u00f4les automatis\u00e9s sp\u00e9cifiques. Le score total est la somme des 4 dimensions (max 400). Les tiers sont attribu\u00e9s selon des seuils fixes."
+        },
+        {
+          "question": "Les donn\u00e9es sont-elles publiques ?",
+          "answer": "Oui. Tous les scores sont d\u00e9riv\u00e9s de donn\u00e9es publiquement accessibles : DNS, HTML, robots.txt, sitemaps, en-t\u00eates HTTP. Aucun acc\u00e8s priv\u00e9 (Google Search Console, analytics) n\u2019est utilis\u00e9."
+        },
+        {
+          "question": "\u00c0 quelle fr\u00e9quence le classement est-il mis \u00e0 jour ?",
+          "answer": "Le classement est mis \u00e0 jour trimestriellement. Chaque mise \u00e0 jour inclut un re-scan complet de tous les groupes."
+        },
+        {
+          "question": "Comment contester un score ?",
+          "answer": "Chaque groupe audite peut demander le rapport d\u2019audit complet et contester les constats. Si un correctif a \u00e9t\u00e9 d\u00e9ploy\u00e9 depuis l\u2019audit, nous re-scannons et ajustons le score."
+        },
+        {
+          "question": "Pourquoi la Citation IA est-elle une dimension ?",
+          "answer": "Les moteurs IA (ChatGPT, Perplexity, Google AI Overviews) r\u00e9pondent de plus en plus aux requ\u00eates automobiles. Les groupes avec des donn\u00e9es structur\u00e9es sont cit\u00e9s. Les autres sont invisibles."
+        }
+      ]
+    }
+  },
+  "insights": {
+    "title": "Insights industrie",
+    "description": "Les tendances, angles morts et bonnes pratiques d\u00e9couverts dans l\u2019analyse de 16 groupes.",
+    "blindSpot": {
+      "title": "L\u2019angle mort de l\u2019industrie : la Citation IA",
+      "description": "Avec une moyenne de 28/100, la pr\u00e9paration \u00e0 la citation par les moteurs IA est la plus grande faiblesse structurelle du secteur automobile fran\u00e7ais."
+    },
+    "patterns": {
+      "title": "Tendances cl\u00e9s",
+      "items": [
+        {
+          "title": "L\u2019email est la dimension la plus forte",
+          "description": "Moyenne 62/100. La plupart des groupes utilisent Google Workspace ou Microsoft 365 avec SPF/DKIM de base."
+        },
+        {
+          "title": "DMARC p=none est \u00e9pid\u00e9mique",
+          "description": "9 des 16 groupes ont DMARC \u00e0 p=none (surveillance uniquement). N\u2019importe qui peut usurper leurs domaines email."
+        },
+        {
+          "title": "Z\u00e9ro donn\u00e9es structur\u00e9es est la norme",
+          "description": "11 des 16 groupes n\u2019ont z\u00e9ro ou quasi-z\u00e9ro marquage JSON-LD Schema.org."
+        },
+        {
+          "title": "Les blogs existent mais sont creux",
+          "description": "La plupart ont un blog ou \u00ab\u00a0actualit\u00e9s\u00a0\u00bb mais le contenu est superficiel (100-400 mots), sans strat\u00e9gie SEO."
+        },
+        {
+          "title": "Aucun sch\u00e9ma LocalBusiness d\u00e9ploy\u00e9",
+          "description": "1 500+ concessions cumul\u00e9es sur les 16 groupes, pas un seul n\u2019impl\u00e9mente LocalBusiness ou AutoDealer \u00e0 l\u2019\u00e9chelle."
+        },
+        {
+          "title": "En-t\u00eates de s\u00e9curit\u00e9 n\u00e9glig\u00e9s",
+          "description": "8 des 16 groupes n\u2019ont aucun en-t\u00eate de s\u00e9curit\u00e9 HTTP. Plusieurs utilisent encore Apache 2.4.29 (2017)."
+        }
+      ]
+    },
+    "dimensionComparison": {
+      "title": "Comparaison par dimension",
+      "average": "Moyenne",
+      "best": "Meilleur",
+      "worst": "Pire"
+    }
+  },
+  "about": {
+    "title": "\u00c0 propos",
+    "description": "Qui nous sommes et pourquoi nous avons cr\u00e9\u00e9 ce classement.",
+    "who": {
+      "title": "Qui nous sommes",
+      "description": "Le Palmar\u00e8s Digital Auto France est produit par ElPi Corp / Perello Consulting, cabinet de conseil sp\u00e9cialis\u00e9 dans la transformation digitale pilot\u00e9e par l\u2019IA."
+    },
+    "why": {
+      "title": "Pourquoi ce classement",
+      "description": "L\u2019industrie automobile fran\u00e7aise investit massivement dans ses concessions physiques mais n\u00e9glige syst\u00e9matiquement son infrastructure digitale. Ce classement rend cette r\u00e9alit\u00e9 mesurable."
+    },
+    "contact": {
+      "title": "Contact",
+      "ctaScore": "Obtenir votre score",
+      "ctaContact": "Nous contacter",
+      "email": "contact@perello.consulting"
+    }
+  },
+  "getScore": {
+    "title": "Obtenir votre score",
+    "description": "Recevez votre audit digital complet en 48 heures. 87 crit\u00e8res, 4 dimensions, recommandations prioris\u00e9es.",
+    "form": {
+      "company": "Nom de l\u2019entreprise",
+      "website": "Site web",
+      "name": "Votre nom",
+      "email": "Email professionnel",
+      "phone": "T\u00e9l\u00e9phone (optionnel)",
+      "submit": "Demander mon audit",
+      "submitting": "Envoi en cours...",
+      "success": "Demande envoy\u00e9e !",
+      "successDescription": "Votre audit sera pr\u00eat sous 48 heures. Nous vous contacterons \u00e0 l\u2019adresse indiqu\u00e9e."
+    }
+  },
+  "preview": {
+    "banner": "Ceci est un aper\u00e7u confidentiel. Vous disposez d\u2019un droit de rectification avant publication.",
+    "notFound": "Aper\u00e7u introuvable. V\u00e9rifiez votre lien."
+  },
+  "leadGate": {
+    "title": "T\u00e9l\u00e9charger l\u2019audit complet",
+    "description": "Recevez les 16 livrables d\u2019audit de ce groupe par email.",
+    "email": "Votre email professionnel",
+    "submit": "Recevoir l\u2019audit",
+    "success": "Audit envoy\u00e9 ! V\u00e9rifiez votre bo\u00eete de r\u00e9ception."
+  },
+  "footer": {
+    "tagline": "Produit par ElPi Corp / Perello Consulting",
+    "methodology": "M\u00e9thodologie",
+    "ranking": "Classement",
+    "contact": "Contact",
+    "rights": "\u00a9 2026 ElPi Corp. Tous droits r\u00e9serv\u00e9s.",
+    "updatedQuarterly": "Classement mis \u00e0 jour trimestriellement."
+  }
+}

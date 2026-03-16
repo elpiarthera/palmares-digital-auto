@@ -1,0 +1,257 @@
+{
+  "meta": {
+    "siteName": "Digital Auto Rankings France 2026",
+    "siteDescription": "The digital maturity ranking of French car dealer groups. 16 groups audited, 87 criteria, 4 dimensions."
+  },
+  "nav": {
+    "home": "Home",
+    "ranking": "Ranking",
+    "methodology": "Methodology",
+    "insights": "Insights",
+    "about": "About",
+    "getScore": "Get your score",
+    "language": "FR"
+  },
+  "home": {
+    "hero": {
+      "title": "Digital Auto Rankings France 2026",
+      "subtitle": "The digital maturity ranking of French car dealer groups",
+      "description": "16 groups audited. 87 criteria. 4 dimensions. Full transparency.",
+      "ctaRanking": "See the full ranking",
+      "ctaScore": "Get your score"
+    },
+    "stats": {
+      "title": "Industry snapshot",
+      "averageScore": "Average score",
+      "outOf": "out of 400",
+      "groupsAudited": "Groups audited",
+      "groups": "groups",
+      "checksPerformed": "Checks performed",
+      "checks": "criteria",
+      "blindSpot": "Blind spot",
+      "blindSpotLabel": "AI Citation",
+      "blindSpotScore": "28/100 average"
+    },
+    "topFive": {
+      "title": "Top 5 ranking",
+      "seeAll": "See all 16 groups"
+    }
+  },
+  "ranking": {
+    "title": "Full ranking",
+    "description": "All 16 French car dealer groups, ranked by digital maturity.",
+    "filterByTier": "Filter by tier",
+    "allTiers": "All tiers",
+    "sortBy": "Sort by",
+    "columns": {
+      "rank": "#",
+      "group": "Group",
+      "seoTech": "SEO Tech",
+      "seoContent": "SEO Content",
+      "email": "Email",
+      "aiCitation": "AI Citation",
+      "total": "Total",
+      "tier": "Tier"
+    }
+  },
+  "group": {
+    "rank": "Rank",
+    "of": "of 16",
+    "total": "Total score",
+    "outOf400": "out of 400",
+    "tier": "Tier",
+    "dimensions": "Scores by dimension",
+    "seoTechnical": "Technical SEO",
+    "seoContent": "SEO Content",
+    "email": "Email & Deliverability",
+    "aiCitation": "AI Citation",
+    "quickWins": "Top 3 priority fixes",
+    "keyFindings": "Key findings by dimension",
+    "downloadAudit": "Download full audit",
+    "downloadDescription": "Receive all 16 audit deliverables for this group by email.",
+    "backToRanking": "Back to ranking",
+    "website": "Website",
+    "revenue": "Revenue",
+    "dealerships": "Dealerships",
+    "hq": "Headquarters",
+    "region": "Region",
+    "vsAverage": "vs. industry average",
+    "impact": {
+      "high": "High impact",
+      "medium": "Medium impact",
+      "low": "Low impact"
+    }
+  },
+  "methodology": {
+    "title": "Methodology",
+    "description": "How we measure digital maturity. 87 criteria, 4 dimensions, full transparency.",
+    "overview": {
+      "title": "Overview",
+      "description": "Each group is evaluated across 4 dimensions, each scored out of 100 points, for a maximum total of 400 points."
+    },
+    "dimensions": {
+      "title": "The 4 dimensions",
+      "seoTechnical": {
+        "title": "D1 \u2014 Technical SEO",
+        "checks": "27 checks",
+        "description": "Can Google crawl and index the site properly? Crawlability, indexability, security, URL structure, mobile, Core Web Vitals."
+      },
+      "seoContent": {
+        "title": "D2 \u2014 SEO Content",
+        "checks": "23 checks",
+        "description": "Is the content deep, authoritative, and well-structured? E-E-A-T signals, depth, readability, blog, internal linking."
+      },
+      "email": {
+        "title": "D3 \u2014 Email & Deliverability",
+        "checks": "20 checks",
+        "description": "Can the domain send emails that reach the inbox? SPF, DKIM, DMARC, blacklists, TLS."
+      },
+      "aiCitation": {
+        "title": "D4 \u2014 AI Citation",
+        "checks": "17 checks",
+        "description": "Can ChatGPT, Perplexity, Google AI cite this site? Schema.org, FAQ, entity clarity, AI bot access."
+      }
+    },
+    "tiers": {
+      "title": "Ranking tiers",
+      "A": { "label": "Tier A", "range": "260\u2013400 points", "description": "Digital leaders. Strong foundations, proactive AI readiness." },
+      "B": { "label": "Tier B", "range": "210\u2013259 points", "description": "Developing. Basics covered but significant gaps." },
+      "C": { "label": "Tier C", "range": "160\u2013209 points", "description": "Lagging. Multiple issues. Digital presence is a liability." },
+      "D": { "label": "Tier D", "range": "0\u2013159 points", "description": "Critical. Fundamental failures. Immediate remediation required." }
+    },
+    "tools": {
+      "title": "Tools and methods",
+      "description": "All scores are derived from specialized automated agents. Pipeline: Firecrawl scraping, DNS analysis, SEO agents, email agents, AI agents."
+    },
+    "transparency": {
+      "title": "Transparency",
+      "items": [
+        "Scores based exclusively on publicly accessible data",
+        "Email audit based on DNS infrastructure, not deliverability metrics",
+        "Performance scores from a single geographic location (Paris)",
+        "Content assessment is point-in-time (audit date stated)",
+        "AI citation readiness is an emerging field \u2014 criteria will evolve"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "How are scores calculated?",
+          "answer": "Each dimension is scored out of 100 points from specific automated checks. The total score is the sum of all 4 dimensions (max 400). Tiers are assigned based on fixed thresholds."
+        },
+        {
+          "question": "Is the data public?",
+          "answer": "Yes. All scores are derived from publicly accessible data: DNS, HTML, robots.txt, sitemaps, HTTP headers. No private access (Google Search Console, analytics) is used."
+        },
+        {
+          "question": "How often is the ranking updated?",
+          "answer": "The ranking is updated quarterly. Each update includes a full re-scan of all groups."
+        },
+        {
+          "question": "How to challenge a score?",
+          "answer": "Each audited group can request the full audit report and challenge findings. If a fix has been deployed since the audit, we re-scan and adjust the score."
+        },
+        {
+          "question": "Why is AI Citation a dimension?",
+          "answer": "AI engines (ChatGPT, Perplexity, Google AI Overviews) increasingly answer automotive queries. Groups with structured data get cited. Others are invisible."
+        }
+      ]
+    }
+  },
+  "insights": {
+    "title": "Industry insights",
+    "description": "Trends, blind spots, and best practices discovered across 16 groups.",
+    "blindSpot": {
+      "title": "The industry blind spot: AI Citation",
+      "description": "At 28/100 average, AI citation readiness is the biggest structural weakness of the French automotive sector."
+    },
+    "patterns": {
+      "title": "Key trends",
+      "items": [
+        {
+          "title": "Email is the strongest dimension",
+          "description": "Average 62/100. Most groups use Google Workspace or Microsoft 365 with basic SPF/DKIM."
+        },
+        {
+          "title": "DMARC p=none is epidemic",
+          "description": "9 of 16 groups have DMARC at p=none (monitoring only). Anyone can spoof their email domains."
+        },
+        {
+          "title": "Zero structured data is the norm",
+          "description": "11 of 16 groups have zero or near-zero JSON-LD Schema.org markup."
+        },
+        {
+          "title": "Blogs exist but are content-light",
+          "description": "Most have a blog or news section but content is shallow (100-400 words), with no SEO strategy."
+        },
+        {
+          "title": "No LocalBusiness schema deployed",
+          "description": "1,500+ combined dealerships across 16 groups, not a single one implements LocalBusiness or AutoDealer at scale."
+        },
+        {
+          "title": "Security headers widely neglected",
+          "description": "8 of 16 groups have zero HTTP security headers. Multiple groups still run Apache 2.4.29 (2017)."
+        }
+      ]
+    },
+    "dimensionComparison": {
+      "title": "Comparison by dimension",
+      "average": "Average",
+      "best": "Best",
+      "worst": "Worst"
+    }
+  },
+  "about": {
+    "title": "About",
+    "description": "Who we are and why we built this ranking.",
+    "who": {
+      "title": "Who we are",
+      "description": "The Digital Auto Rankings France is produced by ElPi Corp / Perello Consulting, a consulting firm specializing in AI-driven digital transformation."
+    },
+    "why": {
+      "title": "Why this ranking",
+      "description": "The French automotive industry invests massively in physical dealerships but systematically neglects its digital infrastructure. This ranking makes that reality measurable."
+    },
+    "contact": {
+      "title": "Contact",
+      "ctaScore": "Get your score",
+      "ctaContact": "Contact us",
+      "email": "contact@perello.consulting"
+    }
+  },
+  "getScore": {
+    "title": "Get your score",
+    "description": "Receive your complete digital audit within 48 hours. 87 criteria, 4 dimensions, prioritized recommendations.",
+    "form": {
+      "company": "Company name",
+      "website": "Website",
+      "name": "Your name",
+      "email": "Professional email",
+      "phone": "Phone (optional)",
+      "submit": "Request my audit",
+      "submitting": "Sending...",
+      "success": "Request sent!",
+      "successDescription": "Your audit will be ready within 48 hours. We will contact you at the email provided."
+    }
+  },
+  "preview": {
+    "banner": "This is a confidential preview. You have a right of rectification before publication.",
+    "notFound": "Preview not found. Check your link."
+  },
+  "leadGate": {
+    "title": "Download full audit",
+    "description": "Receive all 16 audit deliverables for this group by email.",
+    "email": "Your professional email",
+    "submit": "Receive the audit",
+    "success": "Audit sent! Check your inbox."
+  },
+  "footer": {
+    "tagline": "Produced by ElPi Corp / Perello Consulting",
+    "methodology": "Methodology",
+    "ranking": "Ranking",
+    "contact": "Contact",
+    "rights": "\u00a9 2026 ElPi Corp. All rights reserved.",
+    "updatedQuarterly": "Ranking updated quarterly."
+  }
+}
