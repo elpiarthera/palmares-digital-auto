@@ -5,7 +5,13 @@ import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SchemaOrg } from "@/components/schema-org";
-import { Building2, Target, User, Users, Mail } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Building2, Target, User, Users, Mail, HelpCircle } from "lucide-react";
 import { getPageAlternates } from "@/lib/urls";
 
 type Props = {
@@ -47,7 +53,7 @@ function AboutContent() {
     name: "ElPi Corp / Perello Consulting",
     url: "https://perello.consulting",
     description: "AI-driven digital transformation consulting",
-    logo: "https://palmares-digital-auto.vercel.app/og-default.png",
+    logo: "https://palmares-digital-auto.vercel.app/logo.svg",
     founder: {
       "@type": "Person",
       name: "Laurent Perello",
@@ -69,6 +75,11 @@ function AboutContent() {
       { "@type": "ListItem", position: 2, name: locale === "fr" ? "\u00c0 propos" : "About" },
     ],
   };
+
+  const faqItems = t.raw("faq.items") as Array<{
+    question: string;
+    answer: string;
+  }>;
 
   return (
     <>
@@ -129,6 +140,30 @@ function AboutContent() {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">{t("team.description")}</p>
+            </CardContent>
+          </Card>
+
+          {/* FAQ */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <HelpCircle className="h-5 w-5" />
+                {t("faq.title")}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <Accordion className="w-full">
+                {faqItems.map((item, i) => (
+                  <AccordionItem key={i}>
+                    <AccordionTrigger className="text-left text-sm font-medium">
+                      {item.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-sm text-muted-foreground">
+                      {item.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </CardContent>
           </Card>
 

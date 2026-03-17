@@ -275,6 +275,35 @@
       "title": "The team",
       "description": "This ranking is produced by a team of specialized AI agents, orchestrated by Laurent Perello. Each dimension is audited by a dedicated agent trained on industry best practices. The Technical SEO agent verifies 27 control points. The SEO Content agent evaluates depth, authority, and E-E-A-T signals. The Email agent analyzes the complete DNS infrastructure (SPF, DKIM, DMARC, blacklists). The AI Citation agent evaluates readiness for generative engines (Schema.org, FAQ, semantic clarity). Together, they produce a reproducible, objective, and exhaustive audit \u2014 the same pipeline applied to every group, without exception."
     },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "Who produces this ranking?",
+          "answer": "The Digital Auto Rankings France is produced by ElPi Corp / Perello Consulting, a consulting firm specializing in AI-assisted digital transformation. The audit is conducted by a team of specialized AI agents, orchestrated by Laurent Perello."
+        },
+        {
+          "question": "How are scores calculated?",
+          "answer": "Each group is evaluated across 4 dimensions (Technical SEO, SEO Content, Email & Deliverability, AI Citation), each scored out of 100 points from automated checks. The total score (max 400) determines the ranking. All criteria are documented on our Methodology page."
+        },
+        {
+          "question": "How often is the ranking updated?",
+          "answer": "The ranking is updated quarterly. Each update includes a full re-scan of all groups using the same methodology."
+        },
+        {
+          "question": "Can my group be audited?",
+          "answer": "Yes. Any French car dealer group can request a free audit through our form. You will receive your complete score within 48 hours."
+        },
+        {
+          "question": "Is this ranking independent?",
+          "answer": "Yes. No group pays to appear in the ranking, and no score is negotiated. The data used is exclusively public (DNS, HTML, robots.txt, sitemaps, HTTP headers). Our methodology is fully published."
+        },
+        {
+          "question": "How can I request a correction?",
+          "answer": "Each audited group has a right of rectification. If you find an error or a fix has been deployed since the audit, contact us at contact@perello.consulting. We will re-scan and adjust the score."
+        }
+      ]
+    },
     "contact": {
       "title": "Contact",
       "description": "Question about a score? A group to add to the ranking? A custom audit request?",

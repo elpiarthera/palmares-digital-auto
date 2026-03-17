@@ -275,6 +275,35 @@
       "title": "L\u2019\u00e9quipe",
       "description": "Ce classement est produit par une \u00e9quipe d\u2019agents IA sp\u00e9cialis\u00e9s, orchestr\u00e9e par Laurent Perello. Chaque dimension est audit\u00e9e par un agent d\u00e9di\u00e9, entra\u00een\u00e9 sur les bonnes pratiques de son domaine. L\u2019agent SEO Technique v\u00e9rifie 27 points de contr\u00f4le. L\u2019agent SEO Contenu \u00e9value la profondeur, l\u2019autorit\u00e9 et les signaux E-E-A-T. L\u2019agent Email analyse l\u2019infrastructure DNS compl\u00e8te (SPF, DKIM, DMARC, blacklists). L\u2019agent Citation IA \u00e9value la pr\u00e9paration aux moteurs g\u00e9n\u00e9ratifs (Schema.org, FAQ, clart\u00e9 s\u00e9mantique). Ensemble, ils produisent un audit reproductible, objectif et exhaustif \u2014 le m\u00eame pipeline appliqu\u00e9 \u00e0 chaque groupe, sans exception."
     },
+    "faq": {
+      "title": "Questions fr\u00e9quentes",
+      "items": [
+        {
+          "question": "Qui produit ce classement ?",
+          "answer": "Le Palmar\u00e8s Digital Auto France est produit par ElPi Corp / Perello Consulting, cabinet de conseil sp\u00e9cialis\u00e9 dans la transformation digitale assist\u00e9e par l\u2019IA. L\u2019audit est r\u00e9alis\u00e9 par une \u00e9quipe d\u2019agents IA sp\u00e9cialis\u00e9s, orchestr\u00e9e par Laurent Perello."
+        },
+        {
+          "question": "Comment les scores sont-ils calcul\u00e9s ?",
+          "answer": "Chaque groupe est \u00e9valu\u00e9 sur 4 dimensions (SEO Technique, SEO Contenu, Email & D\u00e9livrabilit\u00e9, Citation IA), chacune not\u00e9e sur 100 points \u00e0 partir de contr\u00f4les automatis\u00e9s. Le score total (max 400) d\u00e9termine le classement. Tous les crit\u00e8res sont document\u00e9s dans notre page M\u00e9thodologie."
+        },
+        {
+          "question": "\u00c0 quelle fr\u00e9quence le classement est-il mis \u00e0 jour ?",
+          "answer": "Le classement est mis \u00e0 jour trimestriellement. Chaque mise \u00e0 jour inclut un re-scan complet de tous les groupes avec la m\u00eame m\u00e9thodologie."
+        },
+        {
+          "question": "Mon groupe peut-il \u00eatre audit\u00e9 ?",
+          "answer": "Oui. Tout groupe de distribution automobile fran\u00e7ais peut demander un audit gratuit via notre formulaire. Vous recevrez votre score complet sous 48 heures."
+        },
+        {
+          "question": "Ce classement est-il ind\u00e9pendant ?",
+          "answer": "Oui. Aucun groupe ne paie pour appara\u00eetre dans le classement, et aucun score n\u2019est n\u00e9goci\u00e9. Les donn\u00e9es utilis\u00e9es sont exclusivement publiques (DNS, HTML, robots.txt, sitemaps, en-t\u00eates HTTP). Notre m\u00e9thodologie est int\u00e9gralement publi\u00e9e."
+        },
+        {
+          "question": "Comment demander une correction ?",
+          "answer": "Chaque groupe audit\u00e9 dispose d\u2019un droit de rectification. Si vous constatez une erreur ou si un correctif a \u00e9t\u00e9 d\u00e9ploy\u00e9 depuis l\u2019audit, contactez-nous \u00e0 contact@perello.consulting. Nous re-scannons et ajustons le score."
+        }
+      ]
+    },
     "contact": {
       "title": "Contact",
       "description": "Une question sur un score ? Un groupe \u00e0 ajouter au classement ? Une demande d\u2019audit personnalis\u00e9 ?",

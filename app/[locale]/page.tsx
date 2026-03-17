@@ -36,6 +36,10 @@ function HomeContent() {
       "@type": "Organization",
       "@id": "https://palmares-digital-auto.vercel.app/#organization",
     },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".speakable-summary", ".speakable-insight"],
+    },
   };
 
   const breadcrumbSchema = {
@@ -87,8 +91,8 @@ function HomeContent() {
 
       {/* Editorial */}
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <h2 className="mb-4 text-2xl font-bold">{t("editorial.title")}</h2>
-        <p className="mb-6 text-muted-foreground leading-relaxed">
+        <h2 className="mb-4 text-2xl font-bold speakable-summary">{t("editorial.title")}</h2>
+        <p className="mb-6 text-muted-foreground leading-relaxed speakable-summary">
           {t("editorial.intro")}
         </p>
         <h3 className="mb-3 text-xl font-semibold">{t("editorial.whatTitle")}</h3>

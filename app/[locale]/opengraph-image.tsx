@@ -27,6 +27,21 @@ export default async function Image({
           padding: "60px",
         }}
       >
+        {/* Bar chart logo icon */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-end",
+            gap: "6px",
+            marginBottom: "20px",
+            height: "48px",
+          }}
+        >
+          <div style={{ width: "10px", height: "20px", background: "#666", borderRadius: "2px" }} />
+          <div style={{ width: "10px", height: "28px", background: "#888", borderRadius: "2px" }} />
+          <div style={{ width: "10px", height: "36px", background: "#aaa", borderRadius: "2px" }} />
+          <div style={{ width: "10px", height: "44px", background: "#fff", borderRadius: "2px" }} />
+        </div>
         <div
           style={{
             display: "flex",

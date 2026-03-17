@@ -1,6 +1,5 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { BarChart3 } from "lucide-react";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -10,7 +9,6 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-6 text-center">
           <div className="flex items-center gap-2">
-            <BarChart3 className="h-5 w-5 text-muted-foreground" />
             <span className="text-sm text-muted-foreground">{t("tagline")}</span>
           </div>
 

@@ -3,7 +3,8 @@
 import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
-import { BarChart3, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { useState, useTransition } from "react";
 
 export function Header() {
@@ -30,11 +31,15 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2 font-semibold">
-          <BarChart3 className="h-5 w-5 text-primary" />
-          <span className="hidden sm:inline">
-            {locale === "fr" ? "Palmar\u00e8s Digital Auto" : "Digital Auto Rankings"}
-          </span>
-          <span className="sm:hidden">PDA 2026</span>
+          <Image
+            src="/logo.svg"
+            alt={locale === "fr" ? "Palmarès Digital Auto" : "Digital Auto Rankings"}
+            width={180}
+            height={32}
+            className="hidden h-8 w-auto dark:invert-0 sm:block"
+            priority
+          />
+          <span className="sm:hidden text-sm font-semibold">PDA 2026</span>
         </Link>
 
         {/* Desktop nav */}

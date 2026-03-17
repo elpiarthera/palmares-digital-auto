@@ -52,6 +52,10 @@ function InsightsContent() {
     name: locale === "fr" ? "Insights industrie" : "Industry Insights",
     url: `https://palmares-digital-auto.vercel.app${locale === "en" ? "/en" : ""}/insights`,
     isPartOf: { "@type": "WebSite", "@id": "https://palmares-digital-auto.vercel.app/#website" },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".speakable-summary", ".speakable-insight"],
+    },
     about: {
       "@type": "Dataset",
       name: "Palmar\u00e8s Digital Auto France Q1 2026",
@@ -82,22 +86,22 @@ function InsightsContent() {
 
       {/* Editorial intro */}
       <div className="mb-12 max-w-4xl">
-        <p className="mb-8 text-muted-foreground leading-relaxed">
+        <p className="mb-8 text-muted-foreground leading-relaxed speakable-summary">
           {t("editorial.intro")}
         </p>
 
-        <h2 className="mb-3 text-xl font-bold">{t("editorial.seoTechTitle")}</h2>
-        <p className="mb-6 text-muted-foreground leading-relaxed">
+        <h2 className="mb-3 text-xl font-bold speakable-insight">{t("editorial.seoTechTitle")}</h2>
+        <p className="mb-6 text-muted-foreground leading-relaxed speakable-insight">
           {t("editorial.seoTechBody")}
         </p>
 
-        <h2 className="mb-3 text-xl font-bold">{t("editorial.seoContentTitle")}</h2>
-        <p className="mb-6 text-muted-foreground leading-relaxed">
+        <h2 className="mb-3 text-xl font-bold speakable-insight">{t("editorial.seoContentTitle")}</h2>
+        <p className="mb-6 text-muted-foreground leading-relaxed speakable-insight">
           {t("editorial.seoContentBody")}
         </p>
 
-        <h2 className="mb-3 text-xl font-bold">{t("editorial.emailTitle")}</h2>
-        <p className="mb-6 text-muted-foreground leading-relaxed">
+        <h2 className="mb-3 text-xl font-bold speakable-insight">{t("editorial.emailTitle")}</h2>
+        <p className="mb-6 text-muted-foreground leading-relaxed speakable-insight">
           {t("editorial.emailBody")}
         </p>
       </div>

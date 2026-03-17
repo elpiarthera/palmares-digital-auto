@@ -146,3 +146,108 @@
 input, select, textarea {
   font-size: 16px;
 }
+
+/* Print stylesheet */
+@media print {
+  /* Hide non-essential elements */
+  header,
+  footer,
+  nav,
+  [data-slot="accordion-trigger-icon"],
+  button,
+  .md\:hidden,
+  [aria-label="Toggle menu"] {
+    display: none !important;
+  }
+
+  /* White background, dark text */
+  body,
+  .dark body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  /* Override dark mode card styles */
+  [data-slot="card"],
+  .dark [data-slot="card"],
+  div[class*="bg-card"],
+  div[class*="bg-background"],
+  div[class*="bg-muted"] {
+    background: white !important;
+    color: black !important;
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+  }
+
+  /* Ensure all text is readable */
+  *,
+  .dark * {
+    color: black !important;
+    -webkit-text-fill-color: black !important;
+  }
+
+  /* Show full URLs after links */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #666 !important;
+    -webkit-text-fill-color: #666 !important;
+  }
+
+  /* Clean typography for A4 */
+  h1 { font-size: 22pt !important; }
+  h2 { font-size: 16pt !important; }
+  h3 { font-size: 13pt !important; }
+
+  /* Ensure charts and tables print well */
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+  }
+
+  /* Avoid page breaks inside cards */
+  [data-slot="card"],
+  tr {
+    page-break-inside: avoid;
+  }
+
+  /* Page footer with source URL */
+  @page {
+    margin: 2cm;
+  }
+
+  body::after {
+    content: "Printed from palmares-digital-auto.vercel.app";
+    display: block;
+    text-align: center;
+    font-size: 9pt;
+    color: #999 !important;
+    -webkit-text-fill-color: #999 !important;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ccc;
+  }
+
+  /* Remove gradient backgrounds */
+  .text-gradient {
+    background: none !important;
+    -webkit-text-fill-color: black !important;
+  }
+
+  /* Ensure no overflow issues */
+  * {
+    overflow: visible !important;
+  }
+}

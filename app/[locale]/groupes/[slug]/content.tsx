@@ -73,6 +73,10 @@ export function GroupDetailContent({ group, industry, isPreview }: GroupDetailCo
     },
     datePublished: "2026-03-15",
     reviewBody: `${group.name} scores ${group.total}/400 (Tier ${group.tier}), ranking #${group.rank} of 16 French car dealer groups. Technical SEO: ${group.scores.seoTechnical}/100, SEO Content: ${group.scores.seoContent}/100, Email: ${group.scores.email}/100, AI Citation: ${group.scores.aiCitation}/100.`,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".speakable-summary"],
+    },
   };
 
   const breadcrumbSchema = {
@@ -117,7 +121,7 @@ export function GroupDetailContent({ group, industry, isPreview }: GroupDetailCo
                 #{group.rank} {t("of")}
               </span>
             </div>
-            <h1 className="text-3xl font-bold sm:text-4xl">{group.name}</h1>
+            <h1 className="text-3xl font-bold sm:text-4xl speakable-summary">{group.name}</h1>
             <div className="mt-4 flex flex-wrap gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-1.5">
                 <Globe className="h-3.5 w-3.5" />
@@ -137,7 +141,7 @@ export function GroupDetailContent({ group, industry, isPreview }: GroupDetailCo
               </span>
             </div>
           </div>
-          <div className="flex shrink-0 flex-col items-center rounded-xl border border-border/50 bg-card p-6 text-center">
+          <div className="flex shrink-0 flex-col items-center rounded-xl border border-border/50 bg-card p-6 text-center speakable-summary">
             <p className="text-xs uppercase tracking-wider text-muted-foreground">
               {t("total")}
             </p>

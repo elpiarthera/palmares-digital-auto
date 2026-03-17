@@ -7,6 +7,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { BASE_URL, getPageAlternates } from "@/lib/urls";
 import "../globals.css";
 
@@ -62,6 +63,9 @@ export async function generateMetadata({
     },
     description: m.description,
     alternates,
+    other: {
+      "indexnow-key": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+    },
     openGraph: {
       title: m.title,
       description: m.description,
@@ -103,6 +107,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <NextIntlClientProvider messages={messages}>
             <div className="flex min-h-screen flex-col">
               <Header />
+              <Breadcrumbs />
               <main className="flex-1">{children}</main>
               <Footer />
             </div>
