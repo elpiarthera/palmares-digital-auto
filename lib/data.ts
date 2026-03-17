@@ -57,7 +57,7 @@ export function getDimensionLabel(key: DimensionKey, locale: string) {
   const labels: Record<DimensionKey, Record<string, string>> = {
     seoTechnical: { fr: "SEO Technique", en: "Technical SEO" },
     seoContent: { fr: "SEO Contenu", en: "SEO Content" },
-    email: { fr: "Email & Delivrabilite", en: "Email & Deliverability" },
+    email: { fr: "Email & D\u00e9livrabilit\u00e9", en: "Email & Deliverability" },
     aiCitation: { fr: "Citation IA", en: "AI Citation" },
   };
   return labels[key]?.[locale] ?? labels[key]?.en ?? key;

@@ -4,22 +4,28 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { usePathname as useRawPathname } from "next/navigation";
 import { ChevronRight, Home } from "lucide-react";
-import { getGroups } from "@/lib/data";
+import type { Pathnames } from "@/i18n/routing";
+
+interface BreadcrumbsProps {
+  groupName?: string;
+}
+
+type StaticPathname = Exclude<Pathnames, "/groupes/[slug]">;
 
 interface BreadcrumbItem {
   label: string;
-  href?: string;
+  href?: StaticPathname;
 }
 
 const FR_PATH_LABELS: Record<string, string> = {
   classement: "Classement",
-  methodologie: "Méthodologie",
+  methodologie: "M\u00e9thodologie",
   insights: "Insights",
-  "a-propos": "À propos",
+  "a-propos": "\u00c0 propos",
   "votre-score": "Votre score",
   groupes: "Classement",
-  "mentions-legales": "Mentions légales",
-  confidentialite: "Confidentialité",
+  "mentions-legales": "Mentions l\u00e9gales",
+  confidentialite: "Confidentialit\u00e9",
 };
 
 const EN_PATH_LABELS: Record<string, string> = {
@@ -42,6 +48,23 @@ const EN_PATH_LABELS: Record<string, string> = {
   "privacy-policy": "Privacy policy",
 };
 
+// Map URL segments to internal pathnames for Link
+const SEGMENT_TO_PATHNAME: Record<string, StaticPathname> = {
+  classement: "/classement",
+  ranking: "/classement",
+  methodologie: "/methodologie",
+  methodology: "/methodologie",
+  insights: "/insights",
+  "a-propos": "/a-propos",
+  about: "/a-propos",
+  "votre-score": "/votre-score",
+  "get-your-score": "/votre-score",
+  "mentions-legales": "/mentions-legales",
+  "legal-notice": "/mentions-legales",
+  confidentialite: "/confidentialite",
+  "privacy-policy": "/confidentialite",
+};
+
 function slugToName(slug: string): string {
   return slug
     .split("-")
@@ -49,7 +72,7 @@ function slugToName(slug: string): string {
     .join(" ");
 }
 
-export function Breadcrumbs() {
+export function Breadcrumbs({ groupName }: BreadcrumbsProps) {
   const rawPathname = useRawPathname();
   const locale = useLocale();
   const t = useTranslations("nav");
@@ -76,20 +99,20 @@ export function Breadcrumbs() {
     if ((segment === "groupes" || segment === "groups") && segments[i + 1]) {
       items.push({
         label: labels[segment] || (locale === "fr" ? "Classement" : "Ranking"),
-        href: "/classement" as any,
+        href: "/classement",
       });
       continue;
     }
 
-    // If this is a slug under groupes/groups, resolve from scores data
+    // If this is a slug under groupes/groups, resolve name from prop or fallback
     if (i > 0 && (segments[i - 1] === "groupes" || segments[i - 1] === "groups")) {
-      const group = getGroups().find((g) => g.slug === segment);
-      items.push({ label: group?.name ?? slugToName(segment) });
+      items.push({ label: groupName ?? slugToName(segment) });
       continue;
     }
 
     const label = labels[segment] || slugToName(segment);
-    items.push(isLast ? { label } : { label, href: `/${segments.slice(0, i + 1).join("/")}` as any });
+    const segmentPathname = SEGMENT_TO_PATHNAME[segment];
+    items.push(isLast ? { label } : { label, href: segmentPathname });
   }
 
   return (
@@ -105,7 +128,7 @@ export function Breadcrumbs() {
             )}
             {item.href ? (
               <Link
-                href={item.href as any}
+                href={item.href}
                 className="transition-colors hover:text-foreground"
               >
                 {i === 0 ? (

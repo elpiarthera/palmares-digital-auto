@@ -37,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         locale === "en" ? enPaths[page.path] ?? page.path : page.path;
       entries.push({
         url: `${BASE_URL}${prefix}${localizedPath}`,
-        lastModified: new Date("2026-03-15"),
+        lastModified: new Date(),
       });
     }
 
@@ -48,7 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           : `/groupes/${group.slug}`;
       entries.push({
         url: `${BASE_URL}${groupPath}`,
-        lastModified: new Date("2026-03-15"),
+        lastModified: new Date(),
       });
     }
   }

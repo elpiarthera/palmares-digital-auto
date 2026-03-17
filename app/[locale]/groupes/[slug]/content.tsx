@@ -9,7 +9,12 @@ import { TierBadge } from "@/components/palmares/tier-badge";
 import { ScoreBar } from "@/components/palmares/score-bar";
 import { QuickWinsList } from "@/components/palmares/quick-wins-list";
 import { LeadCaptureForm } from "@/components/palmares/lead-capture-form";
-import { RadarChart } from "@/components/charts/radar-chart";
+import dynamic from "next/dynamic";
+
+const RadarChart = dynamic(
+  () => import("@/components/charts/radar-chart").then((m) => m.RadarChart),
+  { ssr: false, loading: () => <div className="flex h-[350px] items-center justify-center text-muted-foreground text-sm">Loading chart...</div> }
+);
 import { SchemaOrg } from "@/components/schema-org";
 import {
   type Group,

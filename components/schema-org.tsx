@@ -3,10 +3,14 @@ interface SchemaOrgProps {
 }
 
 export function SchemaOrg({ data }: SchemaOrgProps) {
+  const output = Array.isArray(data)
+    ? { "@context": "https://schema.org", "@graph": data }
+    : data;
+
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(output) }}
     />
   );
 }
