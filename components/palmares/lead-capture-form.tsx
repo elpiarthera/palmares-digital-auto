@@ -25,10 +25,23 @@ export function LeadCaptureForm({ variant = "compact", context }: LeadCaptureFor
     e.preventDefault();
     if (!gdprConsent) return;
     setSubmitting(true);
-    // In production, this would POST to an API endpoint
-    await new Promise((r) => setTimeout(r, 1000));
-    setSubmitted(true);
-    setSubmitting(false);
+    try {
+      const formData = new FormData(e.currentTarget);
+      const data = Object.fromEntries(formData.entries());
+      const res = await fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...data, locale, context }),
+      });
+      if (!res.ok) throw new Error("Failed");
+      setSubmitted(true);
+    } catch {
+      alert(locale === "fr"
+        ? "Une erreur est survenue. Envoyez votre demande à contact@perello.consulting."
+        : "An error occurred. Please send your request to contact@perello.consulting.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   const privacyHref = locale === "fr" ? "/confidentialite" : "/en/privacy-policy";
