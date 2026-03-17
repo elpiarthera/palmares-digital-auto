@@ -1,28 +1,23 @@
 "use client";
 
 import { useTranslations, useLocale } from "next-intl";
-import { Link } from "@/i18n/navigation";
-import { usePathname as useNextPathname } from "next/navigation";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { BarChart3, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useTransition } from "react";
 
 export function Header() {
   const t = useTranslations("nav");
   const locale = useLocale();
-  const rawPathname = useNextPathname();
+  const pathname = usePathname();
+  const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isPending, startTransition] = useTransition();
 
   const otherLocale = locale === "fr" ? "en" : "fr";
 
-  // Build locale switcher URL using raw pathname
-  const localePrefix = locale === "fr" ? "" : "/en";
-  const pathWithoutLocale = rawPathname.replace(/^\/(fr|en)/, "") || "/";
-  const localeSwitchHref =
-    otherLocale === "fr" ? pathWithoutLocale : `/en${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`;
-
-  // For nav active detection
-  const currentPath = pathWithoutLocale;
+  // pathname from next-intl is already locale-independent (e.g., "/classement")
+  const currentPath = pathname;
 
   const navItems = [
     { href: "/classement" as const, label: t("ranking"), match: "/classement" },
@@ -60,11 +55,19 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a href={localeSwitchHref}>
-            <Button variant="ghost" size="sm" className="text-xs">
-              {t("language")}
-            </Button>
-          </a>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="text-xs"
+            disabled={isPending}
+            onClick={() => {
+              startTransition(() => {
+                router.replace(pathname as any, { locale: otherLocale });
+              });
+            }}
+          >
+            {t("language")}
+          </Button>
           <Link href="/votre-score" className="hidden sm:block">
             <Button size="sm">{t("getScore")}</Button>
           </Link>
