@@ -94,10 +94,17 @@ export function GroupDetailContent({ group, industry, isPreview }: GroupDetailCo
       <SchemaOrg data={[reviewSchema, breadcrumbSchema]} />
 
       {isPreview && (
-        <div className="border-b border-amber-500/30 bg-amber-500/10 px-4 py-3 text-center text-sm text-amber-500">
-          {locale === "fr"
-            ? "Ceci est un aper\u00e7u confidentiel. Vous disposez d\u2019un droit de rectification avant publication."
-            : "This is a confidential preview. You have a right of rectification before publication."}
+        <div className="border-b border-amber-500/30 bg-amber-500/10 px-4 py-4 text-center text-sm text-amber-200">
+          <p className="font-semibold text-amber-400">
+            {locale === "fr"
+              ? "Aperçu confidentiel"
+              : "Confidential preview"}
+          </p>
+          <p className="mt-1">
+            {locale === "fr"
+              ? "Ceci est un aperçu confidentiel. Vous disposez d\u2019un droit de rectification avant publication. Contactez-nous à contact@perello.consulting avant le 31 mars 2026."
+              : "This is a confidential preview. You have a right of rectification before publication. Contact us at contact@perello.consulting before March 31, 2026."}
+          </p>
         </div>
       )}
 

@@ -4,6 +4,7 @@ import { GroupDetailContent } from "@/app/[locale]/groupes/[slug]/content";
 import { NextIntlClientProvider } from "next-intl";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import type { Metadata } from "next";
 import "../../globals.css";
 
 const geistSans = Geist({
@@ -19,6 +20,24 @@ const geistMono = Geist_Mono({
 type Props = {
   params: Promise<{ token: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { token } = await params;
+  const group = getGroupByToken(token);
+
+  if (!group) {
+    return {
+      title: "Page introuvable",
+      robots: { index: false, follow: false },
+    };
+  }
+
+  return {
+    title: `${group.name} — Aperçu confidentiel | Palmarès Digital Auto`,
+    robots: { index: false, follow: false },
+    openGraph: undefined,
+  };
+}
 
 export default async function PreviewPage({ params }: Props) {
   const { token } = await params;
@@ -38,9 +57,6 @@ export default async function PreviewPage({ params }: Props) {
       <head>
         <meta name="robots" content="noindex, nofollow" />
         <meta name="theme-color" content="#0a0a0a" />
-        <title>
-          {group.name} &mdash; Aper\u00e7u confidentiel | Palmar\u00e8s Digital Auto
-        </title>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
