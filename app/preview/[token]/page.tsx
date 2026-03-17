@@ -1,9 +1,9 @@
-import { notFound } from "next/navigation";
 import { getGroupByToken, getIndustryData } from "@/lib/data";
 import { GroupDetailContent } from "@/app/[locale]/groupes/[slug]/content";
 import { NextIntlClientProvider } from "next-intl";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { PreviewNotFound } from "@/components/palmares/preview-not-found";
 import type { Metadata } from "next";
 import "../../globals.css";
 
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!group) {
     return {
-      title: "Page introuvable",
+      title: "Lien expiré | Palmarès Digital Auto",
       robots: { index: false, follow: false },
     };
   }
@@ -43,14 +43,35 @@ export default async function PreviewPage({ params }: Props) {
   const { token } = await params;
   const group = getGroupByToken(token);
 
+  // Load French messages for preview
+  const messages = (await import("../../../messages/fr.json")).default;
+
   if (!group) {
-    notFound();
+    return (
+      <html lang="fr" suppressHydrationWarning>
+        <head>
+          <meta name="robots" content="noindex, nofollow" />
+          <meta name="theme-color" content="#0a0a0a" />
+        </head>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <NextIntlClientProvider messages={messages} locale="fr">
+              <PreviewNotFound />
+            </NextIntlClientProvider>
+          </ThemeProvider>
+        </body>
+      </html>
+    );
   }
 
   const industry = getIndustryData();
-
-  // Load French messages for preview
-  const messages = (await import("../../../messages/fr.json")).default;
 
   return (
     <html lang="fr" suppressHydrationWarning>

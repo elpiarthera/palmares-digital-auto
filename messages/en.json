@@ -339,6 +339,58 @@
     "banner": "This is a confidential preview. You have a right of rectification before publication.",
     "notFound": "Preview not found. Check your link."
   },
+  "notFound": {
+    "hero": {
+      "title": "This page doesn\u2019t exist \u2014 but your digital audit does.",
+      "subtitle": "The page you\u2019re looking for is no longer available or never existed."
+    },
+    "leadCapture": {
+      "title": "Get your digital score in 48 hours",
+      "description": "87 criteria. 4 dimensions. Results in 48 hours.",
+      "company": "Company name",
+      "email": "Professional email",
+      "website": "Website URL",
+      "gdprConsent": "I consent to my data being used to process my audit request.",
+      "gdprLink": "Privacy policy",
+      "submit": "Request my free audit",
+      "submitting": "Sending...",
+      "success": "Request sent!",
+      "successDescription": "Your audit will be ready within 48 hours."
+    },
+    "trustSignals": {
+      "criteria": "87 criteria",
+      "free": "Free",
+      "methodology": "Public methodology"
+    },
+    "links": {
+      "ranking": "See the ranking",
+      "methodology": "Discover the methodology",
+      "home": "Back to home"
+    }
+  },
+  "previewNotFound": {
+    "hero": {
+      "title": "This preview link is no longer valid",
+      "subtitle": "Preview links expire after the ranking is published."
+    },
+    "leadCapture": {
+      "title": "Your group isn\u2019t in the ranking yet?",
+      "description": "Get your free digital audit. 87 criteria, results in 48 hours.",
+      "company": "Group name",
+      "email": "Professional email",
+      "website": "Website URL",
+      "gdprConsent": "I consent to my data being used to process my audit request.",
+      "gdprLink": "Privacy policy",
+      "submit": "Request my free audit",
+      "submitting": "Sending...",
+      "success": "Request sent!",
+      "successDescription": "Your audit will be ready within 48 hours."
+    },
+    "links": {
+      "ranking": "See the published ranking",
+      "methodology": "Discover the methodology"
+    }
+  },
   "leadGate": {
     "title": "Download full audit",
     "description": "Receive all 16 audit deliverables for this group by email.",

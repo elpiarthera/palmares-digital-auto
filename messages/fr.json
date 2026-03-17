@@ -339,6 +339,58 @@
     "banner": "Ceci est un aper\u00e7u confidentiel. Vous disposez d\u2019un droit de rectification avant publication.",
     "notFound": "Aper\u00e7u introuvable. V\u00e9rifiez votre lien."
   },
+  "notFound": {
+    "hero": {
+      "title": "Cette page n\u2019existe pas \u2014 mais votre audit digital, si.",
+      "subtitle": "La page que vous cherchez n\u2019est plus disponible ou n\u2019a jamais exist\u00e9."
+    },
+    "leadCapture": {
+      "title": "Obtenez votre score digital en 48h",
+      "description": "87 crit\u00e8res. 4 dimensions. R\u00e9sultats en 48 heures.",
+      "company": "Nom de l\u2019entreprise",
+      "email": "Email professionnel",
+      "website": "URL du site web",
+      "gdprConsent": "J\u2019accepte que mes donn\u00e9es soient utilis\u00e9es pour traiter ma demande d\u2019audit.",
+      "gdprLink": "Politique de confidentialit\u00e9",
+      "submit": "Demander mon audit gratuit",
+      "submitting": "Envoi en cours...",
+      "success": "Demande envoy\u00e9e !",
+      "successDescription": "Votre audit sera pr\u00eat sous 48 heures."
+    },
+    "trustSignals": {
+      "criteria": "87 crit\u00e8res",
+      "free": "Gratuit",
+      "methodology": "M\u00e9thodologie publique"
+    },
+    "links": {
+      "ranking": "Voir le classement",
+      "methodology": "D\u00e9couvrir la m\u00e9thodologie",
+      "home": "Retour \u00e0 l\u2019accueil"
+    }
+  },
+  "previewNotFound": {
+    "hero": {
+      "title": "Ce lien de pr\u00e9visualisation n\u2019est plus valide",
+      "subtitle": "Les liens de pr\u00e9visualisation expirent apr\u00e8s publication du classement."
+    },
+    "leadCapture": {
+      "title": "Votre groupe n\u2019est pas encore dans le classement ?",
+      "description": "Obtenez votre audit digital gratuit. 87 crit\u00e8res, r\u00e9sultats en 48 heures.",
+      "company": "Nom du groupe",
+      "email": "Email professionnel",
+      "website": "URL du site web",
+      "gdprConsent": "J\u2019accepte que mes donn\u00e9es soient utilis\u00e9es pour traiter ma demande d\u2019audit.",
+      "gdprLink": "Politique de confidentialit\u00e9",
+      "submit": "Demander mon audit gratuit",
+      "submitting": "Envoi en cours...",
+      "success": "Demande envoy\u00e9e !",
+      "successDescription": "Votre audit sera pr\u00eat sous 48 heures."
+    },
+    "links": {
+      "ranking": "Voir le classement publi\u00e9",
+      "methodology": "D\u00e9couvrir la m\u00e9thodologie"
+    }
+  },
   "leadGate": {
     "title": "T\u00e9l\u00e9charger l\u2019audit complet",
     "description": "Recevez les 16 livrables d\u2019audit de ce groupe par email.",
