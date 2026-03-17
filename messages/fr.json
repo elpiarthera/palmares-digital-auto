@@ -194,7 +194,7 @@
       "seoTechTitle": "SEO Technique : la base est fragile",
       "seoTechBody": "La moyenne du secteur en SEO Technique s\u2019\u00e9tablit \u00e0 58/100. Les probl\u00e8mes sont structurels : canonicaux manquants ou dupliqu\u00e9s, sitemaps incomplets, en-t\u00eates de s\u00e9curit\u00e9 absents. 8 des 16 groupes n\u2019ont aucun en-t\u00eate de s\u00e9curit\u00e9 HTTP. Plusieurs utilisent encore des versions d\u2019Apache dat\u00e9es de 2017. Les leaders (Aramis Auto, Autosphere) se distinguent par une infrastructure technique propre, avec HTTPS forc\u00e9, sitemaps complets et temps de chargement ma\u00eetris\u00e9s.",
       "seoContentTitle": "SEO Contenu : des blogs vides de substance",
-      "seoContentBody": "Moyenne : 44/100. La plupart des groupes disposent d\u2019une section \u00ab\u00a0actualit\u00e9s\u00a0\u00bb ou \u00ab\u00a0blog\u00a0\u00bb, mais le contenu est systm\u00e9tiquement superficiel : articles de 100 \u00e0 400 mots, aucune strat\u00e9gie de mots-cl\u00e9s, pas de maillage interne. Les signaux E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) sont quasi inexistants \u2014 pas de pages auteur, pas de citations, pas de contenu de fond. Les meilleurs performeurs se d\u00e9marquent par du contenu long format (1 500+ mots) avec une structure de titres coh\u00e9rente.",
+      "seoContentBody": "Moyenne : 44/100. La plupart des groupes disposent d\u2019une section \u00ab\u00a0actualit\u00e9s\u00a0\u00bb ou \u00ab\u00a0blog\u00a0\u00bb, mais le contenu est systématiquement superficiel : articles de 100 \u00e0 400 mots, aucune strat\u00e9gie de mots-cl\u00e9s, pas de maillage interne. Les signaux E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) sont quasi inexistants \u2014 pas de pages auteur, pas de citations, pas de contenu de fond. Les meilleurs performeurs se d\u00e9marquent par du contenu long format (1 500+ mots) avec une structure de titres coh\u00e9rente.",
       "emailTitle": "Email & D\u00e9livrabilit\u00e9 : la meilleure dimension, mais un faux sentiment de s\u00e9curit\u00e9",
       "emailBody": "Avec 62/100, l\u2019email est la dimension la plus forte du secteur. La plupart des groupes utilisent Google Workspace ou Microsoft 365 avec SPF et DKIM configur\u00e9s. Mais le d\u00e9tail r\u00e9v\u00e8le un probl\u00e8me massif : 9 des 16 groupes ont une politique DMARC \u00e0 p=none, c\u2019est-\u00e0-dire en mode surveillance uniquement. Concr\u00e8tement, n\u2019importe qui peut envoyer des emails en usurpant leur domaine. Pour des groupes manipulant des transactions \u00e0 plusieurs dizaines de milliers d\u2019euros, c\u2019est un risque critique non adress\u00e9.",
       "aiCitationTitle": "Citation IA : l\u2019angle mort le plus dangereux (28/100)",
@@ -391,6 +391,11 @@
       "methodology": "D\u00e9couvrir la m\u00e9thodologie"
     }
   },
+  "groupTeaser": {
+    "locked": "Audit d\u00e9taill\u00e9 disponible sur demande",
+    "description": "Les scores par dimension, constats cl\u00e9s et recommandations sont r\u00e9serv\u00e9s. Demandez votre audit complet pour acc\u00e9der \u00e0 l\u2019analyse d\u00e9taill\u00e9e.",
+    "cta": "Obtenir l\u2019audit complet"
+  },
   "leadGate": {
     "title": "T\u00e9l\u00e9charger l\u2019audit complet",
     "description": "Recevez les 16 livrables d\u2019audit de ce groupe par email.",
@@ -398,7 +403,7 @@
     "gdprConsent": "J\u2019accepte que mes donn\u00e9es soient utilis\u00e9es pour traiter ma demande.",
     "gdprLink": "Politique de confidentialit\u00e9",
     "submit": "Recevoir l\u2019audit",
-    "success": "Audit envoy\u00e9 ! V\u00e9rifiez votre bo\u00eete de r\u00e9ception."
+    "success": "Demande enregistr\u00e9e. Nous vous contacterons sous 48h."
   },
   "legal": {
     "title": "Mentions l\u00e9gales",

@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { usePathname as useRawPathname } from "next/navigation";
 import { ChevronRight, Home } from "lucide-react";
+import { getGroups } from "@/lib/data";
 
 interface BreadcrumbItem {
   label: string;
@@ -80,9 +81,10 @@ export function Breadcrumbs() {
       continue;
     }
 
-    // If this is a slug under groupes/groups, format the name nicely
+    // If this is a slug under groupes/groups, resolve from scores data
     if (i > 0 && (segments[i - 1] === "groupes" || segments[i - 1] === "groups")) {
-      items.push({ label: slugToName(segment) });
+      const group = getGroups().find((g) => g.slug === segment);
+      items.push({ label: group?.name ?? slugToName(segment) });
       continue;
     }
 

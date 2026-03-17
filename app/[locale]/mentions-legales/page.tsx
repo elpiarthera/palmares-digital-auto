@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Building2, Server, Scale, Shield, Database } from "lucide-react";
+import { getPageAlternates } from "@/lib/urls";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -11,8 +12,28 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "legal" });
+  const alternates = getPageAlternates(locale, "/mentions-legales");
+  const title = t("title");
+  const description =
+    locale === "fr"
+      ? "Mentions l\u00e9gales du site Palmar\u00e8s Digital Auto France."
+      : "Legal notice for the Digital Auto Rankings France website.";
   return {
-    title: t("title"),
+    title,
+    description,
+    alternates,
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      url: alternates.canonical,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+    robots: { index: false, follow: true },
   };
 }
 

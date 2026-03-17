@@ -391,6 +391,11 @@
       "methodology": "Discover the methodology"
     }
   },
+  "groupTeaser": {
+    "locked": "Detailed audit available on request",
+    "description": "Dimension scores, key findings, and recommendations are restricted. Request your full audit to access the detailed analysis.",
+    "cta": "Get the full audit"
+  },
   "leadGate": {
     "title": "Download full audit",
     "description": "Receive all 16 audit deliverables for this group by email.",
@@ -398,7 +403,7 @@
     "gdprConsent": "I consent to my data being used to process my request.",
     "gdprLink": "Privacy policy",
     "submit": "Receive the audit",
-    "success": "Audit sent! Check your inbox."
+    "success": "Request registered. We'll contact you within 48 hours."
   },
   "legal": {
     "title": "Legal notice",

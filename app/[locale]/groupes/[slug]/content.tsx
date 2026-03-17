@@ -34,9 +34,70 @@ interface GroupDetailContentProps {
   isPreview?: boolean;
 }
 
+const SITE_LIVE = process.env.NEXT_PUBLIC_SITE_LIVE === "true";
+
 export function GroupDetailContent({ group, industry, isPreview }: GroupDetailContentProps) {
   const t = useTranslations("group");
+  const tTeaser = useTranslations("groupTeaser");
   const locale = useLocale();
+
+  // Pre-launch: show teaser unless preview mode
+  if (!SITE_LIVE && !isPreview) {
+    return (
+      <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
+        <Link href="/classement">
+          <Button variant="ghost" size="sm" className="mb-6 gap-1.5">
+            <ArrowLeft className="h-3.5 w-3.5" />
+            {t("backToRanking")}
+          </Button>
+        </Link>
+
+        <Card className="overflow-hidden">
+          <CardHeader className="pb-4">
+            <div className="flex items-center gap-3 mb-2">
+              <TierBadge tier={group.tier as Tier} size="lg" />
+              <span className="text-sm text-muted-foreground">
+                #{group.rank} {t("of")}
+              </span>
+            </div>
+            <CardTitle className="text-3xl">{group.name}</CardTitle>
+            <div className="mt-3 flex flex-wrap gap-4 text-sm text-muted-foreground">
+              <span className="flex items-center gap-1.5">
+                <Globe className="h-3.5 w-3.5" />
+                {group.website}
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Building2 className="h-3.5 w-3.5" />
+                {group.dealerships} {locale === "fr" ? "concessions" : "dealerships"}
+              </span>
+            </div>
+          </CardHeader>
+
+          <CardContent className="space-y-6">
+            <Separator />
+
+            <div className="rounded-lg border border-dashed border-muted-foreground/30 bg-muted/30 p-6 text-center">
+              <p className="text-lg font-semibold">
+                {tTeaser("locked")}
+              </p>
+              <p className="mt-2 text-sm text-muted-foreground">
+                {tTeaser("description")}
+              </p>
+            </div>
+
+            <div className="text-center">
+              <Link href="/votre-score">
+                <Button size="lg" className="gap-2">
+                  <TrendingUp className="h-4 w-4" />
+                  {tTeaser("cta")}
+                </Button>
+              </Link>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
 
   const dimensionLabels: Record<DimensionKey, string> = {
     seoTechnical: t("seoTechnical"),

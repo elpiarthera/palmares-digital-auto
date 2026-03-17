@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { getGroupBySlug, getGroups } from "@/lib/data";
 import { getGroupPageAlternates } from "@/lib/urls";
+import { SchemaOrg } from "@/components/schema-org";
 import { Lock, ArrowRight } from "lucide-react";
 
 type Props = {
@@ -24,7 +25,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates,
-    openGraph: { title, description, url: alternates.canonical },
+    openGraph: { title, description, type: "website", url: alternates.canonical },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 
@@ -35,7 +37,43 @@ export default async function GroupPage({ params }: Props) {
   if (!group) notFound();
   const t = await getTranslations({ locale, namespace: "group" });
 
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    name: `${group.name} — Digital Maturity Audit`,
+    reviewBody: locale === "fr"
+      ? `Audit de maturité digitale de ${group.name}. Classé #${group.rank}/16, Tier ${group.tier}.`
+      : `Digital maturity audit of ${group.name}. Ranked #${group.rank}/16, Tier ${group.tier}.`,
+    author: {
+      "@type": "Organization",
+      "@id": "https://palmares-digital-auto.vercel.app/#organization",
+    },
+    itemReviewed: {
+      "@type": "Organization",
+      name: group.name,
+      url: `https://${group.website}`,
+    },
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: group.total,
+      bestRating: 400,
+      worstRating: 0,
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: locale === "fr" ? "Accueil" : "Home", item: "https://palmares-digital-auto.vercel.app" + (locale === "en" ? "/en" : "") },
+      { "@type": "ListItem", position: 2, name: locale === "fr" ? "Classement" : "Ranking", item: `https://palmares-digital-auto.vercel.app${locale === "en" ? "/en/ranking" : "/classement"}` },
+      { "@type": "ListItem", position: 3, name: group.name },
+    ],
+  };
+
   return (
+    <>
+    <SchemaOrg data={[reviewSchema, breadcrumbSchema]} />
     <div className="mx-auto max-w-3xl px-4 py-20 text-center">
       <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-2 text-sm text-amber-400">
         <Lock className="h-4 w-4" />
@@ -78,5 +116,6 @@ export default async function GroupPage({ params }: Props) {
           : "Are you an executive of this group? Contact us at contact@perello.consulting to access your full audit."}
       </p>
     </div>
+    </>
   );
 }

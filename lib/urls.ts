@@ -15,6 +15,8 @@ const EN_PATHS: Record<string, string> = {
   "/insights": "/insights",
   "/a-propos": "/about",
   "/votre-score": "/get-your-score",
+  "/mentions-legales": "/legal-notice",
+  "/confidentialite": "/privacy-policy",
 };
 
 /**

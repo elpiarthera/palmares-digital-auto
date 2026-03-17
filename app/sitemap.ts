@@ -13,6 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/insights" },
     { path: "/a-propos" },
     { path: "/votre-score" },
+    { path: "/mentions-legales" },
+    { path: "/confidentialite" },
   ];
 
   const locales = ["fr", "en"];
@@ -26,6 +28,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       "/methodologie": "/methodology",
       "/a-propos": "/about",
       "/votre-score": "/get-your-score",
+      "/mentions-legales": "/legal-notice",
+      "/confidentialite": "/privacy-policy",
     };
 
     for (const page of staticPages) {

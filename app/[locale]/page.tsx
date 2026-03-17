@@ -1,5 +1,6 @@
+import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { IndustryStats } from "@/components/palmares/industry-stats";
@@ -7,10 +8,39 @@ import { RankingTable } from "@/components/palmares/ranking-table";
 import { getTopGroups } from "@/lib/data";
 import { ArrowRight, BarChart3 } from "lucide-react";
 import { SchemaOrg } from "@/components/schema-org";
+import { getPageAlternates } from "@/lib/urls";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "home" });
+  const alternates = getPageAlternates(locale, "");
+  const title =
+    locale === "fr"
+      ? "Palmar\u00e8s Digital Auto France 2026 \u2014 Classement maturit\u00e9 digitale automobile"
+      : "Digital Auto Rankings France 2026 \u2014 Car dealer digital maturity";
+  const description =
+    locale === "fr"
+      ? "Le classement de la maturit\u00e9 digitale des 16 plus grands groupes de distribution automobile en France. 87 crit\u00e8res, 4 dimensions, transparence totale."
+      : "The digital maturity ranking of the top 16 French car dealer groups. 87 criteria, 4 dimensions, full transparency.";
+  return {
+    alternates,
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      url: alternates.canonical,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+  };
+}
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
