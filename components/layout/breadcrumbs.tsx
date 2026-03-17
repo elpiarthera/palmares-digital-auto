@@ -21,6 +21,7 @@ const FR_PATH_LABELS: Record<string, string> = {
 };
 
 const EN_PATH_LABELS: Record<string, string> = {
+  // Internal route names (next-intl internal pathnames)
   classement: "Ranking",
   methodologie: "Methodology",
   insights: "Insights",
@@ -29,6 +30,14 @@ const EN_PATH_LABELS: Record<string, string> = {
   groupes: "Ranking",
   "mentions-legales": "Legal notice",
   confidentialite: "Privacy policy",
+  // Localized English route names (actual URL segments)
+  ranking: "Ranking",
+  methodology: "Methodology",
+  about: "About",
+  "get-your-score": "Get your score",
+  groups: "Ranking",
+  "legal-notice": "Legal notice",
+  "privacy-policy": "Privacy policy",
 };
 
 function slugToName(slug: string): string {
@@ -58,17 +67,17 @@ export function Breadcrumbs() {
     const segment = segments[i];
     const isLast = i === segments.length - 1;
 
-    // For group detail pages, show "Classement" as parent link
-    if (segment === "groupes" && segments[i + 1]) {
+    // For group detail pages, show "Classement"/"Ranking" as parent link
+    if ((segment === "groupes" || segment === "groups") && segments[i + 1]) {
       items.push({
-        label: labels["groupes"] || "Classement",
+        label: labels[segment] || (locale === "fr" ? "Classement" : "Ranking"),
         href: "/classement" as any,
       });
       continue;
     }
 
-    // If this is a slug under groupes, format the name nicely
-    if (i > 0 && segments[i - 1] === "groupes") {
+    // If this is a slug under groupes/groups, format the name nicely
+    if (i > 0 && (segments[i - 1] === "groupes" || segments[i - 1] === "groups")) {
       items.push({ label: slugToName(segment) });
       continue;
     }
