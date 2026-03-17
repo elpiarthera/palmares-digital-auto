@@ -1,12 +1,10 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
-import { Button } from "@/components/ui/button";
 import { NotFoundLeadForm } from "@/components/palmares/not-found-lead-form";
 import { BarChart3, Home, BookOpen, Shield, Eye } from "lucide-react";
 
-export default function NotFound() {
+export function RootNotFoundContent() {
   const t = useTranslations("notFound");
 
   const schema = {
@@ -67,24 +65,24 @@ export default function NotFound() {
       {/* Alternative paths */}
       <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-          <Link href="/classement">
-            <Button variant="outline" className="gap-2">
+          <a href="/classement">
+            <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground">
               <BarChart3 className="h-4 w-4" />
               {t("links.ranking")}
-            </Button>
-          </Link>
-          <Link href="/methodologie">
-            <Button variant="outline" className="gap-2">
+            </button>
+          </a>
+          <a href="/methodologie">
+            <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground">
               <BookOpen className="h-4 w-4" />
               {t("links.methodology")}
-            </Button>
-          </Link>
-          <Link href="/">
-            <Button variant="ghost" className="gap-2">
+            </button>
+          </a>
+          <a href="/">
+            <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
               <Home className="h-4 w-4" />
               {t("links.home")}
-            </Button>
-          </Link>
+            </button>
+          </a>
         </div>
       </section>
     </>
