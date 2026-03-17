@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -12,6 +12,7 @@ import { TierBadge } from "@/components/palmares/tier-badge";
 import { SchemaOrg } from "@/components/schema-org";
 import { Search, FileText, Mail, Bot, Shield, CheckCircle2 } from "lucide-react";
 import type { Tier } from "@/lib/data";
+import { getPageAlternates } from "@/lib/urls";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -20,9 +21,18 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "methodology" });
+  const alternates = getPageAlternates(locale, "/methodologie");
+  const title = t("title");
+  const description = t("description");
   return {
-    title: t("title"),
-    description: t("description"),
+    title,
+    description,
+    alternates,
+    openGraph: {
+      title,
+      description,
+      url: alternates.canonical,
+    },
   };
 }
 
@@ -34,6 +44,7 @@ export default async function MethodologyPage({ params }: Props) {
 
 function MethodologyContent() {
   const t = useTranslations("methodology");
+  const locale = useLocale();
 
   const dimensions = [
     { key: "seoTechnical", icon: Search, color: "text-chart-1" },
@@ -51,37 +62,18 @@ function MethodologyContent() {
 
   const transparencyItems = t.raw("transparency.items") as string[];
 
-  const howToSchema = {
+  const breadcrumbSchema = {
     "@context": "https://schema.org",
-    "@type": "HowTo",
-    name: "How the Digital Auto Rankings score is calculated",
-    description: "87 automated checks across 4 dimensions: Technical SEO, SEO Content, Email Deliverability, AI Citation Readiness",
-    step: [
-      { "@type": "HowToStep", name: "Scrape target website via Firecrawl (homepage + key pages)", position: 1 },
-      { "@type": "HowToStep", name: "Run Technical SEO agent (27 checks)", position: 2 },
-      { "@type": "HowToStep", name: "Run SEO Content agent (23 checks)", position: 3 },
-      { "@type": "HowToStep", name: "Run Email Infrastructure agent (20 checks via DNS)", position: 4 },
-      { "@type": "HowToStep", name: "Run AI Citation Readiness agent (17 checks)", position: 5 },
-      { "@type": "HowToStep", name: "Sum dimension scores, assign tier", position: 6 },
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: locale === "fr" ? "Accueil" : "Home", item: "https://palmares-digital-auto.vercel.app" + (locale === "en" ? "/en" : "") },
+      { "@type": "ListItem", position: 2, name: locale === "fr" ? "Méthodologie" : "Methodology" },
     ],
-  };
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqItems.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
   };
 
   return (
     <>
-      <SchemaOrg data={[howToSchema, faqSchema]} />
+      <SchemaOrg data={breadcrumbSchema} />
 
       <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="mb-12">

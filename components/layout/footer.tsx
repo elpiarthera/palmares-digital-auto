@@ -24,6 +24,12 @@ export function Footer() {
             <Link href="/a-propos" className="hover:text-foreground transition-colors">
               {t("contact")}
             </Link>
+            <Link href="/mentions-legales" className="hover:text-foreground transition-colors">
+              {t("legalNotice")}
+            </Link>
+            <Link href="/confidentialite" className="hover:text-foreground transition-colors">
+              {t("privacyPolicy")}
+            </Link>
           </nav>
 
           <div className="flex flex-col items-center gap-1 text-xs text-muted-foreground">

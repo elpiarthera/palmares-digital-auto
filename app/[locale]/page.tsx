@@ -23,23 +23,32 @@ function HomeContent() {
   const t = useTranslations("home");
   const topGroups = getTopGroups(5);
 
-  const schemaData = {
+  const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://palmares-digital-auto.vercel.app/#website",
     name: "Palmar\u00e8s Digital Auto France 2026",
     url: "https://palmares-digital-auto.vercel.app",
     description:
       "Le classement de la maturit\u00e9 digitale des groupes de distribution automobile en France",
+    inLanguage: ["fr", "en"],
     publisher: {
       "@type": "Organization",
-      name: "ElPi Corp / Perello Consulting",
-      url: "https://perello.consulting",
+      "@id": "https://palmares-digital-auto.vercel.app/#organization",
     },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Accueil" },
+    ],
   };
 
   return (
     <>
-      <SchemaOrg data={schemaData} />
+      <SchemaOrg data={[websiteSchema, breadcrumbSchema]} />
 
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-border/50">
@@ -74,6 +83,28 @@ function HomeContent() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Editorial */}
+      <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
+        <h2 className="mb-4 text-2xl font-bold">{t("editorial.title")}</h2>
+        <p className="mb-6 text-muted-foreground leading-relaxed">
+          {t("editorial.intro")}
+        </p>
+        <h3 className="mb-3 text-xl font-semibold">{t("editorial.whatTitle")}</h3>
+        <p className="mb-3 text-muted-foreground">{t("editorial.whatDescription")}</p>
+        <ul className="mb-6 list-disc space-y-1 pl-5 text-muted-foreground">
+          {(t.raw("editorial.dimensions") as string[]).map((dim, i) => (
+            <li key={i}>{dim}</li>
+          ))}
+        </ul>
+        <h3 className="mb-3 text-xl font-semibold">{t("editorial.transparencyTitle")}</h3>
+        <p className="mb-4 text-muted-foreground leading-relaxed">
+          {t("editorial.transparencyDescription")}
+        </p>
+        <p className="text-sm text-muted-foreground italic">
+          {t("editorial.producedBy")}
+        </p>
       </section>
 
       {/* Industry Stats */}

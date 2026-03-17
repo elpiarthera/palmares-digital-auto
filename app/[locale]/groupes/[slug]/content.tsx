@@ -52,11 +52,12 @@ export function GroupDetailContent({ group, industry, isPreview }: GroupDetailCo
     aiCitation: "aiCitation",
   };
 
-  const schemaData = {
+  const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     itemReviewed: {
       "@type": "Organization",
+      "@id": `https://palmares-digital-auto.vercel.app/groupes/${group.slug}`,
       name: group.name,
       url: `https://${group.website}`,
     },
@@ -68,14 +69,25 @@ export function GroupDetailContent({ group, industry, isPreview }: GroupDetailCo
     },
     author: {
       "@type": "Organization",
-      name: "ElPi Corp / Perello Consulting",
+      "@id": "https://palmares-digital-auto.vercel.app/#organization",
     },
     datePublished: "2026-03-15",
+    reviewBody: `${group.name} scores ${group.total}/400 (Tier ${group.tier}), ranking #${group.rank} of 16 French car dealer groups. Technical SEO: ${group.scores.seoTechnical}/100, SEO Content: ${group.scores.seoContent}/100, Email: ${group.scores.email}/100, AI Citation: ${group.scores.aiCitation}/100.`,
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: locale === "fr" ? "Accueil" : "Home", item: "https://palmares-digital-auto.vercel.app" + (locale === "en" ? "/en" : "") },
+      { "@type": "ListItem", position: 2, name: locale === "fr" ? "Classement" : "Ranking", item: "https://palmares-digital-auto.vercel.app" + (locale === "en" ? "/en/ranking" : "/classement") },
+      { "@type": "ListItem", position: 3, name: group.name },
+    ],
   };
 
   return (
     <>
-      <SchemaOrg data={schemaData} />
+      <SchemaOrg data={[reviewSchema, breadcrumbSchema]} />
 
       {isPreview && (
         <div className="border-b border-amber-500/30 bg-amber-500/10 px-4 py-3 text-center text-sm text-amber-500">
@@ -137,7 +149,8 @@ export function GroupDetailContent({ group, industry, isPreview }: GroupDetailCo
         <div className="grid gap-8 lg:grid-cols-3">
           {/* Left column: Radar + Dimensions */}
           <div className="space-y-8 lg:col-span-2">
-            {/* Radar Chart */}
+            {/* Scores par dimension */}
+            <h2 className="text-2xl font-bold">{locale === "fr" ? "Scores par dimension" : "Scores by dimension"}</h2>
             <Card>
               <CardHeader>
                 <CardTitle>{t("dimensions")}</CardTitle>
@@ -167,6 +180,7 @@ export function GroupDetailContent({ group, industry, isPreview }: GroupDetailCo
             </Card>
 
             {/* Key Findings */}
+            <h2 className="text-2xl font-bold">{locale === "fr" ? "Constats cl\u00e9s" : "Key findings"}</h2>
             <Card>
               <CardHeader>
                 <CardTitle>{t("keyFindings")}</CardTitle>
@@ -175,8 +189,13 @@ export function GroupDetailContent({ group, industry, isPreview }: GroupDetailCo
                 {DIMENSION_KEYS.map((key) => (
                   <div key={key}>
                     <p className="text-sm font-semibold">{dimensionLabels[key]}</p>
-                    <p className="mt-1 text-sm text-muted-foreground">
-                      {group.keyFindings[findingKeys[key]]}
+                    <p className="mt-1 text-xs text-muted-foreground/70 italic">
+                      {t(`dimensionContext.${key}`)}
+                    </p>
+                    <p className="mt-2 text-sm text-muted-foreground">
+                      {locale === "en" && group.keyFindingsEn
+                        ? group.keyFindingsEn[findingKeys[key]]
+                        : group.keyFindings[findingKeys[key]]}
                     </p>
                     {key !== "aiCitation" && <Separator className="mt-4" />}
                   </div>
@@ -187,6 +206,7 @@ export function GroupDetailContent({ group, industry, isPreview }: GroupDetailCo
 
           {/* Right column: Quick Wins + Download */}
           <div className="space-y-6">
+            <h2 className="text-2xl font-bold">{locale === "fr" ? "Actions prioritaires" : "Priority actions"}</h2>
             <Card>
               <CardHeader>
                 <CardTitle>{t("quickWins")}</CardTitle>

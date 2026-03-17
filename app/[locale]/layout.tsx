@@ -7,9 +7,8 @@ import { NextIntlClientProvider } from "next-intl";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { BASE_URL, getPageAlternates } from "@/lib/urls";
 import "../globals.css";
-
-const BASE_URL = "https://palmares-digital-auto.vercel.app";
 
 type Locale = "fr" | "en";
 
@@ -53,7 +52,7 @@ export async function generateMetadata({
   };
 
   const m = meta[locale] || meta.fr;
-  const canonicalUrl = locale === "fr" ? BASE_URL : `${BASE_URL}/en`;
+  const alternates = getPageAlternates(locale, "");
 
   return {
     metadataBase: new URL(BASE_URL),
@@ -62,28 +61,18 @@ export async function generateMetadata({
       template: `%s | ${locale === "fr" ? "Palmar\u00e8s Digital Auto" : "Digital Auto Rankings"}`,
     },
     description: m.description,
-    alternates: {
-      canonical: canonicalUrl,
-      languages: {
-        fr: BASE_URL,
-        en: `${BASE_URL}/en`,
-        "x-default": BASE_URL,
-      },
-    },
+    alternates,
     openGraph: {
       title: m.title,
       description: m.description,
       type: "website",
-      url: canonicalUrl,
+      url: alternates.canonical,
       siteName: locale === "fr" ? "Palmar\u00e8s Digital Auto France" : "Digital Auto Rankings France",
     },
     twitter: {
       card: "summary_large_image",
       title: m.title,
       description: m.description,
-    },
-    other: {
-      "theme-color": "#0a0a0a",
     },
   };
 }
@@ -101,9 +90,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <head>
-        <meta name="theme-color" content="#0a0a0a" />
-      </head>
+      <head />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

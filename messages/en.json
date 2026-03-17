@@ -20,6 +20,21 @@
       "ctaRanking": "See the full ranking",
       "ctaScore": "Get your score"
     },
+    "editorial": {
+      "title": "What is digital maturity for a car dealer group?",
+      "intro": "The car buying journey starts online. 87% of car buyers research online before visiting a dealership. The quality of a dealer group's digital infrastructure is no longer a competitive advantage \u2014 it's a prerequisite for relevance.",
+      "whatTitle": "What we measure",
+      "whatDescription": "The Digital Auto Rankings evaluates each group across 4 complementary dimensions, for a total score out of 400 points:",
+      "dimensions": [
+        "Technical SEO \u2014 Can Google properly crawl and index the site?",
+        "SEO Content \u2014 Is the content deep, authoritative, and optimized for search?",
+        "Email & Deliverability \u2014 Do the domain's emails reach the inbox?",
+        "AI Citation \u2014 Can ChatGPT, Perplexity, and Google AI Overviews cite this site?"
+      ],
+      "transparencyTitle": "Open methodology, verifiable scores",
+      "transparencyDescription": "Every score is based on 87 documented criteria, applied identically to all groups. The data used is exclusively public: DNS, HTML, robots.txt, sitemaps, HTTP headers. No private access, no favoritism. The full methodology is published on this site.",
+      "producedBy": "This ranking is produced by ElPi Corp / Perello Consulting, a consulting firm specializing in AI-assisted digital transformation. The audit is conducted by a team of specialized AI agents, orchestrated by Laurent Perello."
+    },
     "stats": {
       "title": "Industry snapshot",
       "averageScore": "Average score",
@@ -40,6 +55,12 @@
   "ranking": {
     "title": "Full ranking",
     "description": "All 16 French car dealer groups, ranked by digital maturity.",
+    "editorial": {
+      "howToRead": "How to read this ranking",
+      "howToReadDescription": "Each group is evaluated across 4 dimensions (Technical SEO, SEO Content, Email & Deliverability, AI Citation), each scored out of 100 points. The total score (out of 400) determines the ranking. Click on a group to access its detailed audit with findings and recommendations.",
+      "tiersExplained": "The tiers reflect overall digital maturity: Tier A (260+) designates leaders, Tier B (210-259) developing groups, Tier C (160-209) lagging ones, and Tier D (0-159) critical situations requiring immediate remediation.",
+      "methodologyLink": "See our full methodology to understand the 87 criteria used."
+    },
     "filterByTier": "Filter by tier",
     "allTiers": "All tiers",
     "sortBy": "Sort by",
@@ -76,6 +97,12 @@
     "hq": "Headquarters",
     "region": "Region",
     "vsAverage": "vs. industry average",
+    "dimensionContext": {
+      "seoTechnical": "Technical SEO evaluates whether Google can properly crawl and index the site. Issues here directly impact the group's organic visibility.",
+      "seoContent": "SEO Content measures the depth, authority, and structure of content. A low score means content too thin to compete on key queries.",
+      "email": "Email & Deliverability checks whether the domain is properly configured so emails reach the inbox (SPF, DKIM, DMARC).",
+      "aiCitation": "AI Citation measures whether AI engines (ChatGPT, Perplexity, Google AI) can cite this site. This is the weakest dimension industry-wide, averaging 28/100."
+    },
     "impact": {
       "high": "High impact",
       "medium": "Medium impact",
@@ -162,6 +189,30 @@
   "insights": {
     "title": "Industry insights",
     "description": "Trends, blind spots, and best practices discovered across 16 groups.",
+    "editorial": {
+      "intro": "The analysis of 16 French car dealer groups reveals a sector deeply misaligned between its digital ambitions and the reality of its infrastructure. While investments in physical dealerships remain massive, the digital infrastructure \u2014 the one that greets 87% of buyers on first contact \u2014 is widely under-invested.",
+      "seoTechTitle": "Technical SEO: the foundation is fragile",
+      "seoTechBody": "The industry average for Technical SEO stands at 54/100. The problems are structural: missing or duplicate canonicals, incomplete sitemaps, absent security headers. 8 of 16 groups have zero HTTP security headers. Several still run Apache versions dating from 2017. The leaders (Aramis Auto, Autosphere) stand out with clean technical infrastructure: forced HTTPS, complete sitemaps, and controlled load times.",
+      "seoContentTitle": "SEO Content: blogs empty of substance",
+      "seoContentBody": "Average: 48/100. Most groups have a news or blog section, but content is systematically shallow: 100-400 word articles, no keyword strategy, no internal linking. E-E-A-T signals (Experience, Expertise, Authoritativeness, Trustworthiness) are virtually nonexistent \u2014 no author pages, no citations, no in-depth content. Top performers differentiate with long-form content (1,500+ words) and coherent heading structures.",
+      "emailTitle": "Email & Deliverability: the strongest dimension, but a false sense of security",
+      "emailBody": "At 62/100, email is the sector's strongest dimension. Most groups use Google Workspace or Microsoft 365 with SPF and DKIM configured. But the detail reveals a massive issue: 9 of 16 groups have a DMARC policy set to p=none, meaning monitoring only. In practice, anyone can send emails spoofing their domain. For groups handling transactions worth tens of thousands of euros, this is an unaddressed critical risk.",
+      "aiCitationTitle": "AI Citation: the most dangerous blind spot (28/100)",
+      "aiCitationBody": "This is the most alarming finding of this edition. At 28/100 average, AI citation readiness is catastrophic. What does this score mean? AI engines like ChatGPT, Perplexity, and Google AI Overviews now directly answer consumer questions: \"What's the best dealership near me?\", \"Reliability of brand X\", \"Service cost at group Y\". Sites with structured data (Schema.org), FAQs, and strong semantic clarity get cited. The rest are invisible. 11 of 16 groups have zero or near-zero JSON-LD markup. None implement LocalBusiness or AutoDealer schema at the scale of their dealership networks. The best score (71/100, Aramis Auto) is the only one above the 50 mark.",
+      "bestPracticesTitle": "What leaders do right",
+      "bestPracticesBody": "The top-ranking groups (Aramis Auto, Autosphere) share common traits: clean technical infrastructure (no 404s, complete sitemaps, forced HTTPS), structured content with Schema.org data, and a proactive approach to AI visibility. This isn't a budget question \u2014 several smaller groups outperform billion-euro revenue groups because they invested in foundations rather than cosmetics.",
+      "commonFailuresTitle": "Common failures across the industry",
+      "commonFailuresItems": [
+        "DMARC at p=none: 56% of groups vulnerable to email spoofing",
+        "Zero structured data: 69% of groups without JSON-LD schema",
+        "No LocalBusiness schema: 1,500+ dealerships unreferenced",
+        "Shallow content: 100-400 word articles with no SEO strategy",
+        "Missing security headers: 50% of groups unprotected",
+        "Obsolete servers: Apache 2.4.29 (2017) still in production"
+      ],
+      "comparisonTitle": "Comparison with other sectors",
+      "comparisonBody": "For context: in French e-commerce, average digital maturity scores exceed 280/400. The banking sector sits around 300/400. The automotive industry, at 207/400 average, lags significantly. The sector invests in digital sales transformation (online configurators, financing journeys), but neglects the foundations: technical SEO, authoritative content, and presence in AI-generated answers."
+    },
     "blindSpot": {
       "title": "The industry blind spot: AI Citation",
       "description": "At 28/100 average, AI citation readiness is the biggest structural weakness of the French automotive sector."
@@ -207,28 +258,48 @@
     "description": "Who we are and why we built this ranking.",
     "who": {
       "title": "Who we are",
-      "description": "The Digital Auto Rankings France is produced by ElPi Corp / Perello Consulting, a consulting firm specializing in AI-driven digital transformation."
+      "description": "The Digital Auto Rankings France is produced by ElPi Corp / Perello Consulting, a consulting firm specializing in AI-driven digital transformation. Based in Strasbourg, the firm helps businesses of all sizes optimize their online presence, structure their data, and improve their visibility across both traditional search engines and emerging AI engines."
+    },
+    "founder": {
+      "title": "Laurent Perello",
+      "bio": "25+ years of experience in tech, from Web 1.0 to AI architectures. Founder of ElPi Corp / Perello Consulting. Based in Strasbourg, France.",
+      "expertise": "Specialist in AI-assisted digital transformation for businesses. Laurent works with executives, consultants, and technical teams to adopt AI tools that optimize their digital presence, productivity, and competitiveness. His background spans web development, distributed systems architecture, strategic consulting, and now applied AI engineering for business.",
+      "approach": "His approach: build systems that work, not slide decks. Every audit, every recommendation is backed by verifiable data and specialized AI agents that produce concrete deliverables. No theory disconnected from practice. No negotiated scores. Facts, numbers, actions."
     },
     "why": {
       "title": "Why this ranking",
-      "description": "The French automotive industry invests massively in physical dealerships but systematically neglects its digital infrastructure. This ranking makes that reality measurable."
+      "description": "The French automotive industry invests massively in physical dealerships but systematically neglects its digital infrastructure. This ranking makes that reality measurable.",
+      "extended": "We built this ranking because no independent, transparent benchmark existed for the digital maturity of French car dealer groups. We practice what we preach: every score is based on 87 documented criteria, and our methodology is fully public. No black box, no favoritism, no negotiated scores. Transparency is not a marketing argument \u2014 it's the condition of credibility."
+    },
+    "team": {
+      "title": "The team",
+      "description": "This ranking is produced by a team of specialized AI agents, orchestrated by Laurent Perello. Each dimension is audited by a dedicated agent trained on industry best practices. The Technical SEO agent verifies 27 control points. The SEO Content agent evaluates depth, authority, and E-E-A-T signals. The Email agent analyzes the complete DNS infrastructure (SPF, DKIM, DMARC, blacklists). The AI Citation agent evaluates readiness for generative engines (Schema.org, FAQ, semantic clarity). Together, they produce a reproducible, objective, and exhaustive audit \u2014 the same pipeline applied to every group, without exception."
     },
     "contact": {
       "title": "Contact",
+      "description": "Question about a score? A group to add to the ranking? A custom audit request?",
       "ctaScore": "Get your score",
       "ctaContact": "Contact us",
-      "email": "contact@perello.consulting"
+      "email": "contact@perello.consulting",
+      "twitter": "@PerelloLaurent"
     }
   },
   "getScore": {
     "title": "Get your score",
     "description": "Receive your complete digital audit within 48 hours. 87 criteria, 4 dimensions, prioritized recommendations.",
+    "trustSignals": {
+      "freeAudit": "Free audit within 48h",
+      "criteria": "87 criteria analyzed",
+      "transparent": "Public and transparent methodology"
+    },
     "form": {
       "company": "Company name",
       "website": "Website",
       "name": "Your name",
       "email": "Professional email",
       "phone": "Phone (optional)",
+      "gdprConsent": "I consent to my data being used to process my audit request.",
+      "gdprLink": "See our privacy policy",
       "submit": "Request my audit",
       "submitting": "Sending...",
       "success": "Request sent!",
@@ -243,14 +314,98 @@
     "title": "Download full audit",
     "description": "Receive all 16 audit deliverables for this group by email.",
     "email": "Your professional email",
+    "gdprConsent": "I consent to my data being used to process my request.",
+    "gdprLink": "Privacy policy",
     "submit": "Receive the audit",
     "success": "Audit sent! Check your inbox."
+  },
+  "legal": {
+    "title": "Legal notice",
+    "publisher": {
+      "title": "Site publisher",
+      "company": "ElPi Corp / Perello Consulting",
+      "siret": "Registration in progress",
+      "address": "Strasbourg, France",
+      "email": "contact@perello.consulting",
+      "director": "Publication director: Laurent Perello"
+    },
+    "hosting": {
+      "title": "Hosting",
+      "provider": "Vercel Inc.",
+      "address": "440 N Barranca Ave #4133, Covina, CA 91723, USA",
+      "website": "https://vercel.com"
+    },
+    "intellectual": {
+      "title": "Intellectual property",
+      "description": "All content on this site (text, graphics, data, ranking, methodology) is the property of ElPi Corp / Perello Consulting, unless otherwise stated. Any reproduction, even partial, requires prior authorization."
+    },
+    "data": {
+      "title": "Data and scores",
+      "description": "Published scores are derived exclusively from publicly accessible data (DNS, HTML, HTTP headers, robots.txt, sitemaps). No private access (Google Search Console, analytics) is used. Audited groups have a right of rectification. Any contested and corrected finding results in a re-scan and score adjustment."
+    },
+    "liability": {
+      "title": "Limitation of liability",
+      "description": "Information provided on this site is for informational purposes. ElPi Corp / Perello Consulting strives to ensure data accuracy but cannot guarantee the absence of errors. Use of the information is at the user's sole responsibility."
+    }
+  },
+  "privacy": {
+    "title": "Privacy policy",
+    "lastUpdated": "Last updated: March 2026",
+    "controller": {
+      "title": "Data controller",
+      "description": "ElPi Corp / Perello Consulting, Strasbourg, France. Contact: contact@perello.consulting."
+    },
+    "dataCollected": {
+      "title": "Data collected",
+      "description": "We only collect data you voluntarily provide through the audit request form:",
+      "items": [
+        "Company name",
+        "Website URL",
+        "Your name",
+        "Professional email address",
+        "Phone number (optional)"
+      ]
+    },
+    "purpose": {
+      "title": "Purpose of processing",
+      "description": "Your data is used exclusively to process your digital audit request and contact you with the results. It is never sold, rented, or shared with third parties."
+    },
+    "legalBasis": {
+      "title": "Legal basis",
+      "description": "Processing is based on your consent, expressed by submitting the form and checking the consent checkbox."
+    },
+    "retention": {
+      "title": "Retention period",
+      "description": "Your data is retained for 12 months from your request. After that period, it is deleted unless a business relationship has been established."
+    },
+    "rights": {
+      "title": "Your rights",
+      "description": "Under the GDPR, you have the following rights:",
+      "items": [
+        "Right of access: obtain a copy of your personal data",
+        "Right of rectification: correct inaccurate data",
+        "Right to erasure: request deletion of your data",
+        "Right to portability: receive your data in a structured format",
+        "Right to object: oppose the processing of your data"
+      ],
+      "contact": "To exercise these rights, contact us: contact@perello.consulting."
+    },
+    "cookies": {
+      "title": "Cookies and tracking",
+      "description": "This site does not use any advertising cookies or analytics tracking tools. No tracking pixels are deployed. Only essential technical cookies required for site operation may be used."
+    },
+    "security": {
+      "title": "Security",
+      "description": "We implement the necessary technical and organizational measures to protect your data against unauthorized access, loss, or alteration."
+    }
   },
   "footer": {
     "tagline": "Produced by ElPi Corp / Perello Consulting",
     "methodology": "Methodology",
     "ranking": "Ranking",
     "contact": "Contact",
+    "legalNotice": "Legal notice",
+    "privacyPolicy": "Privacy policy",
     "rights": "\u00a9 2026 ElPi Corp. All rights reserved.",
     "updatedQuarterly": "Ranking updated quarterly."
   }

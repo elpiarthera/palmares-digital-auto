@@ -27,6 +27,14 @@ export const routing = defineRouting({
       fr: "/votre-score",
       en: "/get-your-score",
     },
+    "/mentions-legales": {
+      fr: "/mentions-legales",
+      en: "/legal-notice",
+    },
+    "/confidentialite": {
+      fr: "/confidentialite",
+      en: "/privacy-policy",
+    },
   },
 });
 

@@ -40,10 +40,10 @@
       "slug": "aramis-auto",
       "name": "Aramis Auto",
       "website": "aramisauto.com",
-      "revenue": "2.4 Md\u00a0\u20ac",
+      "revenue": "2.4 Md €",
       "dealerships": "80+",
       "hq": "Arcueil (94)",
-      "region": "\u00cele-de-France",
+      "region": "Île-de-France",
       "scores": {
         "seoTechnical": 72,
         "seoContent": 65,
@@ -60,13 +60,13 @@
           "impact": "high"
         },
         {
-          "action": "Ajouter le sch\u00e9ma Organization + LocalBusiness pour 80+ agences",
+          "action": "Ajouter le schéma Organization + LocalBusiness pour 80+ agences",
           "actionEn": "Add Organization + LocalBusiness schema for 80+ agencies",
           "dimension": "AI Citation",
           "impact": "high"
         },
         {
-          "action": "Lancer un blog avec guides d\u2019achat et comparatifs",
+          "action": "Lancer un blog avec guides d’achat et comparatifs",
           "actionEn": "Launch a blog with buying guides and comparisons",
           "dimension": "SEO Content",
           "impact": "medium"
@@ -74,9 +74,15 @@
       ],
       "keyFindings": {
         "seoTechnical": "Cloudflare CDN, URLs propres, canonicals corrects. Bug : balises noindex contradictoires sur certaines pages.",
-        "seoContent": "Copywriting commercial solide, FAQ avec sch\u00e9ma FAQPage, Trustpilot 4.5/5. Pas de blog.",
-        "email": "Multi-ESP (Google, Mandrill, Amazon SES, Salesforce), 4 s\u00e9lecteurs DKIM. DMARC quarantine.",
-        "aiCitation": "Sch\u00e9ma FAQPage sur la homepage, propositions de valeur citables. Sch\u00e9ma Organization/LocalBusiness manquant."
+        "seoContent": "Copywriting commercial solide, FAQ avec schéma FAQPage, Trustpilot 4.5/5. Pas de blog.",
+        "email": "Multi-ESP (Google, Mandrill, Amazon SES, Salesforce), 4 sélecteurs DKIM. DMARC quarantine.",
+        "aiCitation": "Schéma FAQPage sur la homepage, propositions de valeur citables. Schéma Organization/LocalBusiness manquant."
+      },
+      "keyFindingsEn": {
+        "seoTechnical": "Cloudflare CDN, clean URLs, correct canonicals. Bug: contradictory noindex meta tags on some pages.",
+        "seoContent": "Strong commercial copywriting, FAQ with FAQPage schema, Trustpilot 4.5/5. No blog.",
+        "email": "Multi-ESP (Google, Mandrill, Amazon SES, Salesforce), 4 DKIM selectors. DMARC quarantine.",
+        "aiCitation": "FAQPage schema on homepage, citable value propositions. Organization/LocalBusiness schema missing."
       }
     },
     {
@@ -84,10 +90,10 @@
       "slug": "autosphere",
       "name": "Autosphere (Emil Frey)",
       "website": "autosphere.fr",
-      "revenue": "5.2 Md\u00a0\u20ac",
+      "revenue": "5.2 Md €",
       "dealerships": "296",
       "hq": "Suresnes (92)",
-      "region": "\u00cele-de-France",
+      "region": "Île-de-France",
       "scores": {
         "seoTechnical": 62,
         "seoContent": 58,
@@ -98,40 +104,46 @@
       "tier": "A",
       "quickWins": [
         {
-          "action": "Ajouter les en-t\u00eates de s\u00e9curit\u00e9 sur le sous-domaine www",
+          "action": "Ajouter les en-têtes de sécurité sur le sous-domaine www",
           "actionEn": "Add security headers to www subdomain",
           "dimension": "SEO Technical",
           "impact": "high"
         },
         {
-          "action": "Ajouter le sch\u00e9ma AggregateRating (56 767 avis \u00e0 4.5/5)",
+          "action": "Ajouter le schéma AggregateRating (56 767 avis à 4.5/5)",
           "actionEn": "Add AggregateRating schema (56,767 reviews at 4.5/5)",
           "dimension": "AI Citation",
           "impact": "high"
         },
         {
-          "action": "Ajouter le sch\u00e9ma LocalBusiness pour 1 341 pages concessions",
+          "action": "Ajouter le schéma LocalBusiness pour 1 341 pages concessions",
           "actionEn": "Add LocalBusiness schema for 1,341 dealership pages",
           "dimension": "AI Citation",
           "impact": "high"
         }
       ],
       "keyFindings": {
-        "seoTechnical": "Sitemap massif (40 sous-sitemaps). Meta robots en double, JS lourd. Z\u00e9ro en-t\u00eate de s\u00e9curit\u00e9 sur www.",
-        "seoContent": "Bonne profondeur sur les pages de listing, FAQ 15 questions avec FAQPage. Pas de blog, pas d\u2019auteurs.",
+        "seoTechnical": "Sitemap massif (40 sous-sitemaps). Meta robots en double, JS lourd. Zéro en-tête de sécurité sur www.",
+        "seoContent": "Bonne profondeur sur les pages de listing, FAQ 15 questions avec FAQPage. Pas de blog, pas d’auteurs.",
         "email": "DMARC p=reject, SPF -all, DKIM RSA 2048-bit. La meilleure infrastructure email du classement.",
-        "aiCitation": "Sch\u00e9ma Vehicle/Product/FAQ excellent. Pas de LocalBusiness pour 1 341 concessions."
+        "aiCitation": "Schéma Vehicle/Product/FAQ excellent. Pas de LocalBusiness pour 1 341 concessions."
+      },
+      "keyFindingsEn": {
+        "seoTechnical": "Massive sitemap (40 sub-sitemaps). Duplicate meta robots, heavy JS. Zero security headers on www.",
+        "seoContent": "Good depth on listing pages, FAQ 15 questions with FAQPage. No blog, no authors.",
+        "email": "DMARC p=reject, SPF -all, DKIM RSA 2048-bit. Best email infrastructure in the ranking.",
+        "aiCitation": "Excellent Vehicle/Product/FAQ schema. No LocalBusiness for 1,341 dealerships."
       }
     },
     {
       "rank": 3,
       "slug": "jean-lain",
-      "name": "Jean Lain Mobilit\u00e9s",
+      "name": "Jean Lain Mobilités",
       "website": "jeanlain.com",
-      "revenue": "1.2 Md\u00a0\u20ac",
+      "revenue": "1.2 Md €",
       "dealerships": "130+",
       "hq": "La Motte-Servolex (73)",
-      "region": "Auvergne-Rh\u00f4ne-Alpes",
+      "region": "Auvergne-Rhône-Alpes",
       "scores": {
         "seoTechnical": 52,
         "seoContent": 48,
@@ -154,17 +166,23 @@
           "impact": "high"
         },
         {
-          "action": "D\u00e9ployer le sch\u00e9ma AutoDealer sur 130+ concessions",
+          "action": "Déployer le schéma AutoDealer sur 130+ concessions",
           "actionEn": "Deploy AutoDealer schema on 130+ dealership pages",
           "dimension": "AI Citation",
           "impact": "high"
         }
       ],
       "keyFindings": {
-        "seoTechnical": "Probl\u00e8mes de rendu SPA/JS. En-t\u00eates de s\u00e9curit\u00e9 pr\u00e9sents mais fondations SEO faibles.",
-        "seoContent": "660 articles dans le sitemap, certains excellents. Contenu mince et probl\u00e8mes SPA.",
-        "email": "DMARC p=reject (le plus strict), SPF -all, 5 s\u00e9lecteurs DKIM. Infrastructure email excellente.",
-        "aiCitation": "Z\u00e9ro Schema.org JSON-LD sur tout le site. 130+ concessions sans marquage AutoDealer."
+        "seoTechnical": "Problèmes de rendu SPA/JS. En-têtes de sécurité présents mais fondations SEO faibles.",
+        "seoContent": "660 articles dans le sitemap, certains excellents. Contenu mince et problèmes SPA.",
+        "email": "DMARC p=reject (le plus strict), SPF -all, 5 sélecteurs DKIM. Infrastructure email excellente.",
+        "aiCitation": "Zéro Schema.org JSON-LD sur tout le site. 130+ concessions sans marquage AutoDealer."
+      },
+      "keyFindingsEn": {
+        "seoTechnical": "SPA/JS rendering issues. Security headers present but weak SEO foundations.",
+        "seoContent": "660 articles in sitemap, some excellent. Thin content and SPA issues.",
+        "email": "DMARC p=reject (strictest), SPF -all, 5 DKIM selectors. Excellent email infrastructure.",
+        "aiCitation": "Zero Schema.org JSON-LD across the entire site. 130+ dealerships without AutoDealer markup."
       }
     },
     {
@@ -172,10 +190,10 @@
       "slug": "neubauer",
       "name": "Neubauer",
       "website": "neubauer.fr",
-      "revenue": "1.0 Md\u00a0\u20ac",
+      "revenue": "1.0 Md €",
       "dealerships": "30+",
       "hq": "Saint-Denis (93)",
-      "region": "\u00cele-de-France",
+      "region": "Île-de-France",
       "scores": {
         "seoTechnical": 62,
         "seoContent": 45,
@@ -186,29 +204,35 @@
       "tier": "C",
       "quickWins": [
         {
-          "action": "Ajouter le sch\u00e9ma FAQPage \u00e0 la page /faq existante",
+          "action": "Ajouter le schéma FAQPage à la page /faq existante",
           "actionEn": "Add FAQPage schema to existing /faq page",
           "dimension": "AI Citation",
           "impact": "high"
         },
         {
-          "action": "Ajouter le sch\u00e9ma Organization + AutoDealer",
+          "action": "Ajouter le schéma Organization + AutoDealer",
           "actionEn": "Add Organization + AutoDealer schema",
           "dimension": "AI Citation",
           "impact": "high"
         },
         {
-          "action": "Passer le DMARC \u00e0 pct=100 puis p=reject",
+          "action": "Passer le DMARC à pct=100 puis p=reject",
           "actionEn": "Raise DMARC to pct=100 then p=reject",
           "dimension": "Email",
           "impact": "medium"
         }
       ],
       "keyFindings": {
-        "seoTechnical": "WordPress 6.9.4 + Elementor solides. Sitemap XML et blog manquants. Les sous-domaines fragmentent l\u2019autorit\u00e9.",
+        "seoTechnical": "WordPress 6.9.4 + Elementor solides. Sitemap XML et blog manquants. Les sous-domaines fragmentent l’autorité.",
         "seoContent": "Texte corporate, pas de blog visible, pas de pages locales pour 30+ concessions.",
-        "email": "SPF -all, 4 s\u00e9lecteurs DKIM. DMARC quarantine pct=80.",
-        "aiCitation": "Z\u00e9ro JSON-LD. Fragmentation sous-domaines. Pas de faits citables."
+        "email": "SPF -all, 4 sélecteurs DKIM. DMARC quarantine pct=80.",
+        "aiCitation": "Zéro JSON-LD. Fragmentation sous-domaines. Pas de faits citables."
+      },
+      "keyFindingsEn": {
+        "seoTechnical": "Solid WordPress 6.9.4 + Elementor. Missing XML sitemap and blog. Subdomains fragment authority.",
+        "seoContent": "Corporate text, no visible blog, no local pages for 30+ dealerships.",
+        "email": "SPF -all, 4 DKIM selectors. DMARC quarantine pct=80.",
+        "aiCitation": "Zero JSON-LD. Subdomain fragmentation. No citable facts."
       }
     },
     {
@@ -216,7 +240,7 @@
       "slug": "gueudet",
       "name": "Gueudet 1880",
       "website": "gueudet.fr",
-      "revenue": "2.67 Md\u00a0\u20ac",
+      "revenue": "2.67 Md €",
       "dealerships": "170+",
       "hq": "Amiens (80)",
       "region": "Hauts-de-France",
@@ -230,29 +254,35 @@
       "tier": "C",
       "quickWins": [
         {
-          "action": "Corriger le sitemap (am\u00e9lioration imm\u00e9diate du crawl pour des milliers de pages)",
+          "action": "Corriger le sitemap (amélioration immédiate du crawl pour des milliers de pages)",
           "actionEn": "Fix the sitemap (instant crawl improvement for thousands of pages)",
           "dimension": "SEO Technical",
           "impact": "high"
         },
         {
-          "action": "Ajouter le sch\u00e9ma FAQPage et du contenu FAQ",
+          "action": "Ajouter le schéma FAQPage et du contenu FAQ",
           "actionEn": "Add FAQPage schema and FAQ content",
           "dimension": "AI Citation",
           "impact": "medium"
         },
         {
-          "action": "Ajouter le sch\u00e9ma LocalBusiness pour 170+ concessions",
+          "action": "Ajouter le schéma LocalBusiness pour 170+ concessions",
           "actionEn": "Add LocalBusiness schema for 170+ dealerships",
           "dimension": "AI Citation",
           "impact": "high"
         }
       ],
       "keyFindings": {
-        "seoTechnical": "Sitemap XML manquant, critique. Z\u00e9ro en-t\u00eate de s\u00e9curit\u00e9. Version serveur expos\u00e9e.",
-        "seoContent": "Blog actif (Le MaG) avec sch\u00e9ma Article et attribution d\u2019auteur. Pas de FAQ.",
-        "email": "DMARC p=none, SPF softfail, cl\u00e9 DKIM 1024-bit. Google Workspace MX correctement configur\u00e9.",
-        "aiCitation": "Meilleur sch\u00e9ma Organization du classement (Wikipedia, Wikidata, Google KG li\u00e9s). Sch\u00e9ma Car sur les annonces."
+        "seoTechnical": "Sitemap XML manquant, critique. Zéro en-tête de sécurité. Version serveur exposée.",
+        "seoContent": "Blog actif (Le MaG) avec schéma Article et attribution d’auteur. Pas de FAQ.",
+        "email": "DMARC p=none, SPF softfail, clé DKIM 1024-bit. Google Workspace MX correctement configuré.",
+        "aiCitation": "Meilleur schéma Organization du classement (Wikipedia, Wikidata, Google KG liés). Schéma Car sur les annonces."
+      },
+      "keyFindingsEn": {
+        "seoTechnical": "Missing XML sitemap, critical. Zero security headers. Server version exposed.",
+        "seoContent": "Active blog (Le MaG) with Article schema and author attribution. No FAQ.",
+        "email": "DMARC p=none, SPF softfail, DKIM key 1024-bit. Google Workspace MX correctly configured.",
+        "aiCitation": "Best Organization schema in the ranking (Wikipedia, Wikidata, Google KG linked). Car schema on listings."
       }
     },
     {
@@ -260,10 +290,10 @@
       "slug": "chopard",
       "name": "Groupe Chopard",
       "website": "chopard-auto.com",
-      "revenue": "1.9 Md\u00a0\u20ac",
+      "revenue": "1.9 Md €",
       "dealerships": "132",
-      "hq": "Besan\u00e7on (25)",
-      "region": "Bourgogne-Franche-Comt\u00e9",
+      "hq": "Besançon (25)",
+      "region": "Bourgogne-Franche-Comté",
       "scores": {
         "seoTechnical": 62,
         "seoContent": 55,
@@ -280,7 +310,7 @@
           "impact": "high"
         },
         {
-          "action": "Ajouter le sch\u00e9ma Article aux 138 articles de blog",
+          "action": "Ajouter le schéma Article aux 138 articles de blog",
           "actionEn": "Add Article schema to 138 blog posts",
           "dimension": "AI Citation",
           "impact": "medium"
@@ -293,10 +323,16 @@
         }
       ],
       "keyFindings": {
-        "seoTechnical": "Excellents en-t\u00eates de s\u00e9curit\u00e9. Probl\u00e8mes de pagination (100+ pages).",
-        "seoContent": "138 articles, cat\u00e9gories bien organis\u00e9es, \u00e9criture auto de qualit\u00e9 (1 200+ mots). Z\u00e9ro attribution d\u2019auteur.",
-        "email": "SPF -all mais d\u00e9passement probable de 10 lookups DNS. DMARC p=none. DKIM 1024-bit.",
-        "aiCitation": "Z\u00e9ro JSON-LD dans le HTML source malgr\u00e9 le framework Nuxt.js."
+        "seoTechnical": "Excellents en-têtes de sécurité. Problèmes de pagination (100+ pages).",
+        "seoContent": "138 articles, catégories bien organisées, écriture auto de qualité (1 200+ mots). Zéro attribution d’auteur.",
+        "email": "SPF -all mais dépassement probable de 10 lookups DNS. DMARC p=none. DKIM 1024-bit.",
+        "aiCitation": "Zéro JSON-LD dans le HTML source malgré le framework Nuxt.js."
+      },
+      "keyFindingsEn": {
+        "seoTechnical": "Excellent security headers. Pagination issues (100+ pages).",
+        "seoContent": "138 articles, well-organized categories, quality auto writing (1,200+ words). Zero author attribution.",
+        "email": "SPF -all but likely exceeding 10 DNS lookups. DMARC p=none. DKIM 1024-bit.",
+        "aiCitation": "Zero JSON-LD in HTML source despite Nuxt.js framework."
       }
     },
     {
@@ -304,7 +340,7 @@
       "slug": "bodemer",
       "name": "Bodemer Auto",
       "website": "bodemer-auto.com",
-      "revenue": "1.0 Md\u00a0\u20ac",
+      "revenue": "1.0 Md €",
       "dealerships": "40",
       "hq": "Saint-Brieuc (22)",
       "region": "Bretagne",
@@ -318,29 +354,35 @@
       "tier": "B",
       "quickWins": [
         {
-          "action": "Corriger l\u2019erreur 500 sur /vehicules-occasion",
+          "action": "Corriger l’erreur 500 sur /vehicules-occasion",
           "actionEn": "Fix the 500 error on /vehicules-occasion",
           "dimension": "SEO Technical",
           "impact": "high"
         },
         {
-          "action": "Ajouter le sch\u00e9ma FAQPage \u00e0 la page FAQ existante (rich snippets imm\u00e9diats)",
+          "action": "Ajouter le schéma FAQPage à la page FAQ existante (rich snippets immédiats)",
           "actionEn": "Add FAQPage schema to existing FAQ page (instant rich snippets)",
           "dimension": "AI Citation",
           "impact": "high"
         },
         {
-          "action": "Ajouter le sch\u00e9ma Article avec auteur aux 195 articles de blog",
+          "action": "Ajouter le schéma Article avec auteur aux 195 articles de blog",
           "actionEn": "Add Article schema with author to 195 blog posts",
           "dimension": "AI Citation",
           "impact": "medium"
         }
       ],
       "keyFindings": {
-        "seoTechnical": "HSTS avec preload, bons sitemaps (3 778 URLs v\u00e9hicules). Faiblesses de performance et pagination.",
-        "seoContent": "Meilleur blog du classement : 195 articles, auteur nomm\u00e9 (C\u00e9dric Pozas), page auteur d\u00e9di\u00e9e.",
-        "email": "SPF -all, 3 s\u00e9lecteurs DKIM (multi-s\u00e9lecteur), Google Workspace. DMARC p=none.",
-        "aiCitation": "Z\u00e9ro JSON-LD malgr\u00e9 le meilleur contenu. FAQ existante sans sch\u00e9ma FAQPage. Potentiel \u00e9norme gaspill\u00e9."
+        "seoTechnical": "HSTS avec preload, bons sitemaps (3 778 URLs véhicules). Faiblesses de performance et pagination.",
+        "seoContent": "Meilleur blog du classement : 195 articles, auteur nommé (Cédric Pozas), page auteur dédiée.",
+        "email": "SPF -all, 3 sélecteurs DKIM (multi-sélecteur), Google Workspace. DMARC p=none.",
+        "aiCitation": "Zéro JSON-LD malgré le meilleur contenu. FAQ existante sans schéma FAQPage. Potentiel énorme gaspillé."
+      },
+      "keyFindingsEn": {
+        "seoTechnical": "HSTS with preload, good sitemaps (3,778 vehicle URLs). Performance and pagination weaknesses.",
+        "seoContent": "Best blog in the ranking: 195 articles, named author (Cedric Pozas), dedicated author page.",
+        "email": "SPF -all, 3 DKIM selectors (multi-selector), Google Workspace. DMARC p=none.",
+        "aiCitation": "Zero JSON-LD despite the best content. Existing FAQ without FAQPage schema. Enormous wasted potential."
       }
     },
     {
@@ -348,7 +390,7 @@
       "slug": "tressol-chabrier",
       "name": "Tressol-Chabrier",
       "website": "tressol-chabrier.fr",
-      "revenue": "1.0 Md\u00a0\u20ac",
+      "revenue": "1.0 Md €",
       "dealerships": "126",
       "hq": "Montpellier (34)",
       "region": "Occitanie / PACA",
@@ -362,29 +404,35 @@
       "tier": "C",
       "quickWins": [
         {
-          "action": "Ajouter le sch\u00e9ma FAQPage \u00e0 la FAQ existante de la homepage",
+          "action": "Ajouter le schéma FAQPage à la FAQ existante de la homepage",
           "actionEn": "Add FAQPage schema to existing homepage FAQ",
           "dimension": "AI Citation",
           "impact": "high"
         },
         {
-          "action": "Cr\u00e9er des landing pages ville/marque (126 concessions \u00d7 marques)",
+          "action": "Créer des landing pages ville/marque (126 concessions × marques)",
           "actionEn": "Create city/brand landing pages (126 dealerships x brands)",
           "dimension": "SEO Content",
           "impact": "high"
         },
         {
-          "action": "Passer le DMARC \u00e0 p=quarantine",
+          "action": "Passer le DMARC à p=quarantine",
           "actionEn": "Advance DMARC to p=quarantine",
           "dimension": "Email",
           "impact": "medium"
         }
       ],
       "keyFindings": {
-        "seoTechnical": "HTTPS + HTTP/2. Pas d\u2019en-t\u00eates de s\u00e9curit\u00e9. Balise title avec retours \u00e0 la ligne. Sitemap de seulement 113 URLs.",
-        "seoContent": "Contenu blog et fil d\u2019Ariane am\u00e9lior\u00e9s dans l\u2019audit approfondi. URLs blog double-encod\u00e9es.",
-        "email": "SPF ~all, DMARC p=none. 4 s\u00e9lecteurs DKIM (bonne couverture). Int\u00e9gration Zendesk.",
-        "aiCitation": "Sch\u00e9ma Organization basique uniquement. Pas d\u2019AutoDealer, LocalBusiness, FAQPage."
+        "seoTechnical": "HTTPS + HTTP/2. Pas d’en-têtes de sécurité. Balise title avec retours à la ligne. Sitemap de seulement 113 URLs.",
+        "seoContent": "Contenu blog et fil d’Ariane améliorés dans l’audit approfondi. URLs blog double-encodées.",
+        "email": "SPF ~all, DMARC p=none. 4 sélecteurs DKIM (bonne couverture). Intégration Zendesk.",
+        "aiCitation": "Schéma Organization basique uniquement. Pas d’AutoDealer, LocalBusiness, FAQPage."
+      },
+      "keyFindingsEn": {
+        "seoTechnical": "HTTPS + HTTP/2. No security headers. Title tag with line breaks. Sitemap of only 113 URLs.",
+        "seoContent": "Blog content and breadcrumbs improved in deep audit. Double-encoded blog URLs.",
+        "email": "SPF ~all, DMARC p=none. 4 DKIM selectors (good coverage). Zendesk integration.",
+        "aiCitation": "Basic Organization schema only. No AutoDealer, LocalBusiness, FAQPage."
       }
     },
     {
@@ -392,7 +440,7 @@
       "slug": "mary",
       "name": "Mary Automobiles",
       "website": "mary.fr",
-      "revenue": "1.0 Md\u00a0\u20ac",
+      "revenue": "1.0 Md €",
       "dealerships": "53",
       "hq": "Lisieux (14)",
       "region": "Normandie",
@@ -406,7 +454,7 @@
       "tier": "C",
       "quickWins": [
         {
-          "action": "Ajouter les en-t\u00eates de s\u00e9curit\u00e9 (HSTS, CSP, X-Frame-Options)",
+          "action": "Ajouter les en-têtes de sécurité (HSTS, CSP, X-Frame-Options)",
           "actionEn": "Add security headers (HSTS, CSP, X-Frame-Options)",
           "dimension": "SEO Technical",
           "impact": "medium"
@@ -418,17 +466,23 @@
           "impact": "high"
         },
         {
-          "action": "Cr\u00e9er une page \u00ab\u00a0chiffres cl\u00e9s\u00a0\u00bb avec les faits du groupe",
+          "action": "Créer une page « chiffres clés » avec les faits du groupe",
           "actionEn": "Create a key facts page with group statistics",
           "dimension": "SEO Content",
           "impact": "medium"
         }
       ],
       "keyFindings": {
-        "seoTechnical": "HTTP/2 actif, sitemap 333 URLs. Z\u00e9ro en-t\u00eate de s\u00e9curit\u00e9. Cha\u00eene de redirection double.",
-        "seoContent": "Blog = sponsoring uniquement (golf, \u00e9quitation), z\u00e9ro valeur SEO. Pas de FAQ.",
+        "seoTechnical": "HTTP/2 actif, sitemap 333 URLs. Zéro en-tête de sécurité. Chaîne de redirection double.",
+        "seoContent": "Blog = sponsoring uniquement (golf, équitation), zéro valeur SEO. Pas de FAQ.",
         "email": "SPF -all, DMARC quarantine 100%. Pas de reporting DMARC. DKIM incomplet.",
-        "aiCitation": "Pas de JSON-LD (seulement microdata BreadcrumbList basique). Chiffres cl\u00e9s absents du contenu."
+        "aiCitation": "Pas de JSON-LD (seulement microdata BreadcrumbList basique). Chiffres clés absents du contenu."
+      },
+      "keyFindingsEn": {
+        "seoTechnical": "HTTP/2 active, sitemap 333 URLs. Zero security headers. Double redirect chain.",
+        "seoContent": "Blog = sponsorship only (golf, horse riding), zero SEO value. No FAQ.",
+        "email": "SPF -all, DMARC quarantine 100%. No DMARC reporting. Incomplete DKIM.",
+        "aiCitation": "No JSON-LD (only basic microdata BreadcrumbList). Key figures absent from content."
       }
     },
     {
@@ -436,7 +490,7 @@
       "slug": "gemy",
       "name": "Gemy Automobiles",
       "website": "gemy.fr",
-      "revenue": "1.1 Md\u00a0\u20ac",
+      "revenue": "1.1 Md €",
       "dealerships": "44",
       "hq": "Laval (53)",
       "region": "Pays de la Loire",
@@ -450,7 +504,7 @@
       "tier": "C",
       "quickWins": [
         {
-          "action": "Corriger la structure des URLs (supprimer les pr\u00e9fixes hash)",
+          "action": "Corriger la structure des URLs (supprimer les préfixes hash)",
           "actionEn": "Fix URL structure (remove hash prefixes)",
           "dimension": "SEO Technical",
           "impact": "high"
@@ -462,17 +516,23 @@
           "impact": "high"
         },
         {
-          "action": "Cr\u00e9er des balises meta title et description pour la homepage",
+          "action": "Créer des balises meta title et description pour la homepage",
           "actionEn": "Create proper meta title and description for homepage",
           "dimension": "SEO Technical",
           "impact": "high"
         }
       ],
       "keyFindings": {
-        "seoTechnical": "Next.js SSR mais URLs opaques avec hash qui d\u00e9truisent la valeur SEO.",
-        "seoContent": "Page \u00ab\u00a0Qui sommes-nous\u00a0\u00bb riche. Homepage tr\u00e8s mince. Pas de blog.",
+        "seoTechnical": "Next.js SSR mais URLs opaques avec hash qui détruisent la valeur SEO.",
+        "seoContent": "Page « Qui sommes-nous » riche. Homepage très mince. Pas de blog.",
         "email": "DMARC p=reject + sp=reject (le plus strict). SPF -all. DKIM 2048-bit.",
-        "aiCitation": "Z\u00e9ro JSON-LD. URLs opaques. Le contenu est dans des images, pas du texte."
+        "aiCitation": "Zéro JSON-LD. URLs opaques. Le contenu est dans des images, pas du texte."
+      },
+      "keyFindingsEn": {
+        "seoTechnical": "Next.js SSR but opaque URLs with hash that destroy SEO value.",
+        "seoContent": "Rich 'About Us' page. Very thin homepage. No blog.",
+        "email": "DMARC p=reject + sp=reject (strictest). SPF -all. DKIM 2048-bit.",
+        "aiCitation": "Zero JSON-LD. Opaque URLs. Content is in images, not text."
       }
     },
     {
@@ -480,7 +540,7 @@
       "slug": "hess",
       "name": "Hess Automobile",
       "website": "hess-automobile.fr",
-      "revenue": "1.3 Md\u00a0\u20ac",
+      "revenue": "1.3 Md €",
       "dealerships": "86",
       "hq": "Strasbourg (67)",
       "region": "Grand Est",
@@ -494,13 +554,13 @@
       "tier": "C",
       "quickWins": [
         {
-          "action": "Corriger le robots.txt (crawl-delay, r\u00e8gles bots IA)",
+          "action": "Corriger le robots.txt (crawl-delay, règles bots IA)",
           "actionEn": "Fix robots.txt (crawl-delay, AI bot rules)",
           "dimension": "SEO Technical",
           "impact": "high"
         },
         {
-          "action": "Ajouter le sch\u00e9ma FAQPage et r\u00e9\u00e9crire les r\u00e9ponses FAQ",
+          "action": "Ajouter le schéma FAQPage et réécrire les réponses FAQ",
           "actionEn": "Add FAQPage schema and rewrite FAQ answers",
           "dimension": "AI Citation",
           "impact": "high"
@@ -513,10 +573,16 @@
         }
       ],
       "keyFindings": {
-        "seoTechnical": "Crawl-delay 600s dans robots.txt. R\u00e8gles bots IA contradictoires. Blog avec contenu VE.",
+        "seoTechnical": "Crawl-delay 600s dans robots.txt. Règles bots IA contradictoires. Blog avec contenu VE.",
         "seoContent": "Blog existant mais sans dates, sans auteurs, faible cadence.",
         "email": "SPF ~all (softfail). DMARC en mode surveillance uniquement.",
-        "aiCitation": "Pas de sch\u00e9ma FAQPage. Pas de LocalBusiness pour les concessions."
+        "aiCitation": "Pas de schéma FAQPage. Pas de LocalBusiness pour les concessions."
+      },
+      "keyFindingsEn": {
+        "seoTechnical": "Crawl-delay 600s in robots.txt. Contradictory AI bot rules. Blog with EV content.",
+        "seoContent": "Existing blog but no dates, no authors, low publishing cadence.",
+        "email": "SPF ~all (softfail). DMARC in monitoring mode only.",
+        "aiCitation": "No FAQPage schema. No LocalBusiness for dealerships."
       }
     },
     {
@@ -524,10 +590,10 @@
       "slug": "bymycar",
       "name": "BYmyCAR / Cosmobilis",
       "website": "bymycar.fr",
-      "revenue": "3.49 Md\u00a0\u20ac",
+      "revenue": "3.49 Md €",
       "dealerships": "~100",
       "hq": "Lyon (69)",
-      "region": "Auvergne-Rh\u00f4ne-Alpes",
+      "region": "Auvergne-Rhône-Alpes",
       "scores": {
         "seoTechnical": 58,
         "seoContent": 52,
@@ -538,29 +604,35 @@
       "tier": "C",
       "quickWins": [
         {
-          "action": "Ajouter des balises canonical \u00e0 toutes les pages",
+          "action": "Ajouter des balises canonical à toutes les pages",
           "actionEn": "Add canonical tags to all pages",
           "dimension": "SEO Technical",
           "impact": "high"
         },
         {
-          "action": "Impl\u00e9menter les sch\u00e9mas Organization + Vehicle + AutoDealer",
+          "action": "Implémenter les schémas Organization + Vehicle + AutoDealer",
           "actionEn": "Implement Organization + Vehicle + AutoDealer schema",
           "dimension": "AI Citation",
           "impact": "high"
         },
         {
-          "action": "Passer le DMARC \u00e0 p=quarantine",
+          "action": "Passer le DMARC à p=quarantine",
           "actionEn": "Advance DMARC to p=quarantine",
           "dimension": "Email",
           "impact": "medium"
         }
       ],
       "keyFindings": {
-        "seoTechnical": "Pages cl\u00e9s en 404, pollution de param\u00e8tres Algolia. Bons en-t\u00eates de s\u00e9curit\u00e9.",
-        "seoContent": "Webzine actif avec donn\u00e9es propri\u00e9taires (\u00e9tude 1 000 conducteurs). Pas d\u2019auteur, pas de FAQ.",
-        "email": "DMARC p=none. Cl\u00e9s DKIM 1024-bit. SPF d\u00e9passant probablement 10 lookups DNS.",
-        "aiCitation": "Z\u00e9ro Schema.org JSON-LD sur tout le site. #2 distributeur fran\u00e7ais."
+        "seoTechnical": "Pages clés en 404, pollution de paramètres Algolia. Bons en-têtes de sécurité.",
+        "seoContent": "Webzine actif avec données propriétaires (étude 1 000 conducteurs). Pas d’auteur, pas de FAQ.",
+        "email": "DMARC p=none. Clés DKIM 1024-bit. SPF dépassant probablement 10 lookups DNS.",
+        "aiCitation": "Zéro Schema.org JSON-LD sur tout le site. #2 distributeur français."
+      },
+      "keyFindingsEn": {
+        "seoTechnical": "Key pages returning 404, Algolia parameter pollution. Good security headers.",
+        "seoContent": "Active webzine with proprietary data (1,000-driver study). No author, no FAQ.",
+        "email": "DMARC p=none. DKIM keys 1024-bit. SPF likely exceeding 10 DNS lookups.",
+        "aiCitation": "Zero Schema.org JSON-LD across the entire site. #2 French car dealer group."
       }
     },
     {
@@ -568,7 +640,7 @@
       "slug": "car-avenue",
       "name": "CAR Avenue",
       "website": "car-avenue.com",
-      "revenue": "1.8 Md\u00a0\u20ac",
+      "revenue": "1.8 Md €",
       "dealerships": "146",
       "hq": "Lesmenils (54)",
       "region": "Grand Est",
@@ -582,29 +654,35 @@
       "tier": "C",
       "quickWins": [
         {
-          "action": "G\u00e9n\u00e9rer et d\u00e9ployer un sitemap.xml",
+          "action": "Générer et déployer un sitemap.xml",
           "actionEn": "Generate and deploy sitemap.xml",
           "dimension": "SEO Technical",
           "impact": "high"
         },
         {
-          "action": "Supprimer polyfill.io et mettre \u00e0 jour Apache",
+          "action": "Supprimer polyfill.io et mettre à jour Apache",
           "actionEn": "Remove polyfill.io and upgrade Apache",
           "dimension": "SEO Technical",
           "impact": "high"
         },
         {
-          "action": "\u00c9tendre le sch\u00e9ma Vehicle/AutoDealer des pages VO \u00e0 tout le site",
+          "action": "Étendre le schéma Vehicle/AutoDealer des pages VO à tout le site",
           "actionEn": "Extend Vehicle/AutoDealer schema from VO pages to all page types",
           "dimension": "AI Citation",
           "impact": "medium"
         }
       ],
       "keyFindings": {
-        "seoTechnical": "Pas de robots.txt, pas de sitemap XML, z\u00e9ro contenu \u00e9ditorial.",
-        "seoContent": "146 articles de blog mais 100% corporate/RH/promo. Z\u00e9ro contenu SEO.",
-        "email": "Configuration email passable mais plus faible que l\u2019\u00e9valuation initiale.",
-        "aiCitation": "Sch\u00e9ma Vehicle + AggregateOffer + AutoDealer sur les pages VO \u2014 bonne base. Z\u00e9ro ailleurs."
+        "seoTechnical": "Pas de robots.txt, pas de sitemap XML, zéro contenu éditorial.",
+        "seoContent": "146 articles de blog mais 100% corporate/RH/promo. Zéro contenu SEO.",
+        "email": "Configuration email passable mais plus faible que l’évaluation initiale.",
+        "aiCitation": "Schéma Vehicle + AggregateOffer + AutoDealer sur les pages VO — bonne base. Zéro ailleurs."
+      },
+      "keyFindingsEn": {
+        "seoTechnical": "No robots.txt, no XML sitemap, zero editorial content.",
+        "seoContent": "146 blog articles but 100% corporate/HR/promo. Zero SEO content.",
+        "email": "Passable email configuration but weaker than initial assessment.",
+        "aiCitation": "Vehicle + AggregateOffer + AutoDealer schema on used car pages — good base. Zero elsewhere."
       }
     },
     {
@@ -612,7 +690,7 @@
       "slug": "dubreuil",
       "name": "Groupe Dubreuil",
       "website": "dubreuil-automobiles.com",
-      "revenue": "1.15 Md\u00a0\u20ac",
+      "revenue": "1.15 Md €",
       "dealerships": "60",
       "hq": "La Roche-sur-Yon (85)",
       "region": "Pays de la Loire",
@@ -632,23 +710,29 @@
           "impact": "high"
         },
         {
-          "action": "Cr\u00e9er un blog avec 5-10 articles fondamentaux",
+          "action": "Créer un blog avec 5-10 articles fondamentaux",
           "actionEn": "Create a blog with 5-10 foundational articles",
           "dimension": "SEO Content",
           "impact": "high"
         },
         {
-          "action": "Ajouter le sch\u00e9ma Organization + AutoDealer pour 60 concessions",
+          "action": "Ajouter le schéma Organization + AutoDealer pour 60 concessions",
           "actionEn": "Add Organization + AutoDealer schema for 60 dealerships",
           "dimension": "AI Citation",
           "impact": "high"
         }
       ],
       "keyFindings": {
-        "seoTechnical": "Fondation WordPress/Elementor, TLS 1.3, HSTS, CDN. Score am\u00e9lior\u00e9 dans l\u2019audit approfondi.",
-        "seoContent": "Z\u00e9ro blog, z\u00e9ro contenu \u00e9ditorial. Homepage = catalogue produits.",
-        "email": "Domaine volontairement configur\u00e9 pour ne pas envoyer d\u2019emails. Anti-spoofing correct.",
-        "aiCitation": "Z\u00e9ro sch\u00e9ma, z\u00e9ro blog, z\u00e9ro FAQ, z\u00e9ro contenu citable."
+        "seoTechnical": "Fondation WordPress/Elementor, TLS 1.3, HSTS, CDN. Score amélioré dans l’audit approfondi.",
+        "seoContent": "Zéro blog, zéro contenu éditorial. Homepage = catalogue produits.",
+        "email": "Domaine volontairement configuré pour ne pas envoyer d’emails. Anti-spoofing correct.",
+        "aiCitation": "Zéro schéma, zéro blog, zéro FAQ, zéro contenu citable."
+      },
+      "keyFindingsEn": {
+        "seoTechnical": "WordPress/Elementor foundation, TLS 1.3, HSTS, CDN. Score improved in deep audit.",
+        "seoContent": "Zero blog, zero editorial content. Homepage = product catalog.",
+        "email": "Domain intentionally configured not to send emails. Anti-spoofing correct.",
+        "aiCitation": "Zero schema, zero blog, zero FAQ, zero citable content."
       }
     },
     {
@@ -656,7 +740,7 @@
       "slug": "gea",
       "name": "GEA (Grand Est Automobiles)",
       "website": "gea-automobiles.fr",
-      "revenue": "~700 M\u00a0\u20ac",
+      "revenue": "~700 M €",
       "dealerships": "48",
       "hq": "Schiltigheim (67)",
       "region": "Grand Est",
@@ -676,23 +760,29 @@
           "impact": "high"
         },
         {
-          "action": "Corriger le rendu du sch\u00e9ma Yoast",
+          "action": "Corriger le rendu du schéma Yoast",
           "actionEn": "Fix Yoast schema rendering",
           "dimension": "AI Citation",
           "impact": "high"
         },
         {
-          "action": "Passer le DMARC \u00e0 p=quarantine",
+          "action": "Passer le DMARC à p=quarantine",
           "actionEn": "Upgrade DMARC to p=quarantine",
           "dimension": "Email",
           "impact": "medium"
         }
       ],
       "keyFindings": {
-        "seoTechnical": "WordPress sur OVH sans CDN. Canonicals pr\u00e9sents (via Yoast). Z\u00e9ro en-t\u00eate de s\u00e9curit\u00e9.",
-        "seoContent": "Articles de blog de 100-200 mots. Blog 100% copier-coller. 89 t\u00e9moignages non int\u00e9gr\u00e9s.",
-        "email": "CRITIQUE : z\u00e9ro enregistrement DKIM trouv\u00e9. DMARC p=none. Email Gandi (pas enterprise).",
-        "aiCitation": "Yoast install\u00e9 mais sch\u00e9ma non rendu sur les pages r\u00e9elles. Z\u00e9ro FAQ."
+        "seoTechnical": "WordPress sur OVH sans CDN. Canonicals présents (via Yoast). Zéro en-tête de sécurité.",
+        "seoContent": "Articles de blog de 100-200 mots. Blog 100% copier-coller. 89 témoignages non intégrés.",
+        "email": "CRITIQUE : zéro enregistrement DKIM trouvé. DMARC p=none. Email Gandi (pas enterprise).",
+        "aiCitation": "Yoast installé mais schéma non rendu sur les pages réelles. Zéro FAQ."
+      },
+      "keyFindingsEn": {
+        "seoTechnical": "WordPress on OVH without CDN. Canonicals present (via Yoast). Zero security headers.",
+        "seoContent": "Blog articles of 100-200 words. Blog is 100% copy-paste. 89 testimonials not integrated.",
+        "email": "CRITICAL: zero DKIM records found. DMARC p=none. Gandi email (not enterprise).",
+        "aiCitation": "Yoast installed but schema not rendering on actual pages. Zero FAQ."
       }
     },
     {
@@ -700,9 +790,9 @@
       "slug": "maurin",
       "name": "Groupe Maurin",
       "website": "groupe-maurin.com",
-      "revenue": "2.7 Md\u00a0\u20ac",
+      "revenue": "2.7 Md €",
       "dealerships": "204",
-      "hq": "N\u00eemes (30)",
+      "hq": "Nîmes (30)",
       "region": "Occitanie",
       "scores": {
         "seoTechnical": 39,
@@ -714,19 +804,19 @@
       "tier": "D",
       "quickWins": [
         {
-          "action": "G\u00e9n\u00e9rer et d\u00e9ployer un sitemap.xml",
+          "action": "Générer et déployer un sitemap.xml",
           "actionEn": "Generate and deploy a sitemap.xml",
           "dimension": "SEO Technical",
           "impact": "high"
         },
         {
-          "action": "Ajouter le sch\u00e9ma Organization + AutoDealer pour 204 locations",
+          "action": "Ajouter le schéma Organization + AutoDealer pour 204 locations",
           "actionEn": "Add Organization + AutoDealer schema for 204 locations",
           "dimension": "AI Citation",
           "impact": "high"
         },
         {
-          "action": "Ajouter les en-t\u00eates de s\u00e9curit\u00e9 et mettre \u00e0 jour Apache",
+          "action": "Ajouter les en-têtes de sécurité et mettre à jour Apache",
           "actionEn": "Add security headers and upgrade Apache",
           "dimension": "SEO Technical",
           "impact": "medium"
@@ -734,9 +824,15 @@
       ],
       "keyFindings": {
         "seoTechnical": "Pas de canonical, pas de sitemap, meta keywords vides. Score SEO Tech le plus bas.",
-        "seoContent": "Blog avec posts de ~100 mots (r\u00e9cap\u00e9v\u00e9nements). Pas d\u2019auteurs. Lien vers Google+ (mort depuis 2019).",
+        "seoContent": "Blog avec posts de ~100 mots (récapévénements). Pas d’auteurs. Lien vers Google+ (mort depuis 2019).",
         "email": "Google Workspace MX, SPF avec Google DKIM 2048-bit. DMARC p=none via DMARC Advisor.",
-        "aiCitation": "Z\u00e9ro JSON-LD sur tout le site. Z\u00e9ro FAQ. Score AI Citation le plus bas du classement (8/100)."
+        "aiCitation": "Zéro JSON-LD sur tout le site. Zéro FAQ. Score AI Citation le plus bas du classement (8/100)."
+      },
+      "keyFindingsEn": {
+        "seoTechnical": "No canonical, no sitemap, empty meta keywords. Lowest Technical SEO score.",
+        "seoContent": "Blog with ~100-word posts (event recaps). No authors. Link to Google+ (dead since 2019).",
+        "email": "Google Workspace MX, SPF with Google DKIM 2048-bit. DMARC p=none via DMARC Advisor.",
+        "aiCitation": "Zero JSON-LD across the entire site. Zero FAQ. Lowest AI Citation score in the ranking (8/100)."
       }
     }
   ],

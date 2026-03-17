@@ -7,12 +7,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const groups = getGroups();
 
   const staticPages = [
-    { path: "", priority: 1.0 },
-    { path: "/classement", priority: 0.9 },
-    { path: "/methodologie", priority: 0.8 },
-    { path: "/insights", priority: 0.8 },
-    { path: "/a-propos", priority: 0.5 },
-    { path: "/votre-score", priority: 0.7 },
+    { path: "" },
+    { path: "/classement" },
+    { path: "/methodologie" },
+    { path: "/insights" },
+    { path: "/a-propos" },
+    { path: "/votre-score" },
   ];
 
   const locales = ["fr", "en"];
@@ -34,8 +34,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: `${BASE_URL}${prefix}${localizedPath}`,
         lastModified: new Date("2026-03-15"),
-        changeFrequency: "monthly",
-        priority: page.priority,
       });
     }
 
@@ -47,8 +45,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: `${BASE_URL}${groupPath}`,
         lastModified: new Date("2026-03-15"),
-        changeFrequency: "monthly",
-        priority: 0.7,
       });
     }
   }

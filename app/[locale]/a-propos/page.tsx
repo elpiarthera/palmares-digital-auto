@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SchemaOrg } from "@/components/schema-org";
-import { Building2, Target, Mail } from "lucide-react";
+import { Building2, Target, User, Users, Mail } from "lucide-react";
+import { getPageAlternates } from "@/lib/urls";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -14,9 +15,18 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "about" });
+  const alternates = getPageAlternates(locale, "/a-propos");
+  const title = t("title");
+  const description = t("description");
   return {
-    title: t("title"),
-    description: t("description"),
+    title,
+    description,
+    alternates,
+    openGraph: {
+      title,
+      description,
+      url: alternates.canonical,
+    },
   };
 }
 
@@ -28,23 +38,41 @@ export default async function AboutPage({ params }: Props) {
 
 function AboutContent() {
   const t = useTranslations("about");
+  const locale = useLocale();
 
-  const schemaData = {
+  const orgSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://palmares-digital-auto.vercel.app/#organization",
     name: "ElPi Corp / Perello Consulting",
     url: "https://perello.consulting",
     description: "AI-driven digital transformation consulting",
+    logo: "https://palmares-digital-auto.vercel.app/og-default.png",
+    founder: {
+      "@type": "Person",
+      name: "Laurent Perello",
+      url: "https://x.com/PerelloLaurent",
+    },
     contactPoint: {
       "@type": "ContactPoint",
       email: "contact@perello.consulting",
       contactType: "sales",
     },
+    sameAs: ["https://x.com/PerelloLaurent"],
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: locale === "fr" ? "Accueil" : "Home", item: "https://palmares-digital-auto.vercel.app" + (locale === "en" ? "/en" : "") },
+      { "@type": "ListItem", position: 2, name: locale === "fr" ? "\u00c0 propos" : "About" },
+    ],
   };
 
   return (
     <>
-      <SchemaOrg data={schemaData} />
+      <SchemaOrg data={[orgSchema, breadcrumbSchema]} />
 
       <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="mb-12">
@@ -68,12 +96,39 @@ function AboutContent() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
+                <User className="h-5 w-5" />
+                {t("founder.title")}
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <p className="text-muted-foreground">{t("founder.bio")}</p>
+              <p className="text-muted-foreground">{t("founder.expertise")}</p>
+              <p className="text-muted-foreground">{t("founder.approach")}</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
                 <Target className="h-5 w-5" />
                 {t("why.title")}
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="space-y-3">
               <p className="text-muted-foreground">{t("why.description")}</p>
+              <p className="text-muted-foreground">{t("why.extended")}</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Users className="h-5 w-5" />
+                {t("team.title")}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">{t("team.description")}</p>
             </CardContent>
           </Card>
 
@@ -85,7 +140,19 @@ function AboutContent() {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <p className="text-muted-foreground">{t("contact.email")}</p>
+              <p className="text-muted-foreground">{t("contact.description")}</p>
+              <p className="text-muted-foreground">
+                {t("contact.email")}
+                {" \u2014 "}
+                <a
+                  href="https://x.com/PerelloLaurent"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-foreground"
+                >
+                  {t("contact.twitter")}
+                </a>
+              </p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/votre-score">
                   <Button>{t("contact.ctaScore")}</Button>
