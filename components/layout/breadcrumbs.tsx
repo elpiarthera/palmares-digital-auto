@@ -1,7 +1,8 @@
 "use client";
 
 import { useLocale, useTranslations } from "next-intl";
-import { Link, usePathname } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
+import { usePathname as useRawPathname } from "next/navigation";
 import { ChevronRight, Home } from "lucide-react";
 
 interface BreadcrumbItem {
@@ -48,9 +49,12 @@ function slugToName(slug: string): string {
 }
 
 export function Breadcrumbs() {
-  const pathname = usePathname();
+  const rawPathname = useRawPathname();
   const locale = useLocale();
   const t = useTranslations("nav");
+
+  // Strip locale prefix from raw pathname
+  const pathname = rawPathname.replace(/^\/(fr|en)/, "") || "/";
 
   // Don't show on homepage
   if (pathname === "/") {
