@@ -67,7 +67,34 @@ export function Header() {
             disabled={isPending}
             onClick={() => {
               startTransition(() => {
-                router.replace(pathname as any, { locale: otherLocale });
+                // For localePrefix: "as-needed", FR = no prefix, EN = /en
+                // Use window.location for reliable cross-locale navigation
+                const currentPath = window.location.pathname;
+                if (otherLocale === "fr") {
+                  // Going to FR: strip /en prefix
+                  const frPath = currentPath.replace(/^\/en/, "") || "/";
+                  // Translate EN paths to FR equivalents
+                  const translated = frPath
+                    .replace(/^\/ranking$/, "/classement")
+                    .replace(/^\/methodology$/, "/methodologie")
+                    .replace(/^\/about$/, "/a-propos")
+                    .replace(/^\/get-your-score$/, "/votre-score")
+                    .replace(/^\/groups\//, "/groupes/")
+                    .replace(/^\/legal-notice$/, "/mentions-legales")
+                    .replace(/^\/privacy-policy$/, "/confidentialite");
+                  window.location.href = translated;
+                } else {
+                  // Going to EN: add /en prefix and translate paths
+                  const enPath = currentPath
+                    .replace(/^\/classement$/, "/ranking")
+                    .replace(/^\/methodologie$/, "/methodology")
+                    .replace(/^\/a-propos$/, "/about")
+                    .replace(/^\/votre-score$/, "/get-your-score")
+                    .replace(/^\/groupes\//, "/groups/")
+                    .replace(/^\/mentions-legales$/, "/legal-notice")
+                    .replace(/^\/confidentialite$/, "/privacy-policy");
+                  window.location.href = `/en${enPath}`;
+                }
               });
             }}
           >
